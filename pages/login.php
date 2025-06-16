@@ -16,7 +16,7 @@
     <!-- Mensagem de erro exemplo -->
     <!-- <div class="mensagem-erro">Usuário ou senha inválidos</div> -->
 
-    <form action="autenticar.php" method="post">
+    <form action="" method="post">
       <label for="usuario">Usuário</label>
       <input type="text" name="usuario" id="usuario" required />
 
