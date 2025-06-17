@@ -9,13 +9,18 @@
       height: 100vh;
     }
 
+    
+header{
+
+}
+
     .painel-container {
       background-color: #fff;
       padding: 40px;
       border-radius: 12px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.1);
       text-align: center;
-      max-width: 400px;
+      max-width: 800px;
       width: 90%;
     }
 
@@ -28,7 +33,7 @@
       margin-top: 30px;
     }
 
-    .painel-container a {
+    .sairsistema {
       display: inline-block;
       padding: 10px 20px;
       background-color: #e63946;
@@ -38,6 +43,20 @@
       transition: background 0.3s ease;
     }
 
-    .painel-container a:hover {
+     .entrarcadastro {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: #fff;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background 0.3s ease;
+    }
+
+     .entrarcadastro:hover {
+      background-color: #015dbe;
+    }
+
+    .sairsistema:hover {
       background-color: #d62839;
     }

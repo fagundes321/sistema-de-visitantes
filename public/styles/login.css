@@ -38,14 +38,23 @@
 
     button {
       width: 100%;
-      padding: 10px;
+     padding: 10px 20px;
       background-color: #007bff;
       color: white;
       font-weight: bold;
+
       border: none;
-      border-radius: 5px;
+      border-radius: 8px;
       cursor: pointer;
     }
+
+          /* display: inline-block;
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: #fff;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background 0.3s ease; */
 
     button:hover {
       background-color: #0056b3;
