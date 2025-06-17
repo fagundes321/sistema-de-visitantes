@@ -12,4 +12,3 @@ require_once __DIR__ . ('/../pages/login.php');
 
 // rotas js
 // require_once __DIR__ . ('/../public/scripts/');
-

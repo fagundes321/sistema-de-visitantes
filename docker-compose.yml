@@ -18,11 +18,11 @@ services:
     image: mysql:8.0
     environment:
       MYSQL_ROOT_PASSWORD: '123'
-      MYSQL_DATABASE: 
+      MYSQL_DATABASE: visitantes
       MYSQL_USER: db_user
       MYSQL_PASSWORD: '123'
     ports:
-      - "3307:3306"
+      - "3306:3306"
   phpmyadmin:
     image: phpmyadmin/phpmyadmin
     links:
