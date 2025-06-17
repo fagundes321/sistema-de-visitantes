@@ -1,7 +1,7 @@
 <?php 
 
 // rota da conexão do banco de dados
-require_once __DIR__ . ('/../config/conn.php');
+require_once __DIR__ . ('/../config/database/conn.php');
 
 // rota das paginas
 require_once __DIR__ . ('/../pages/login.php');
@@ -12,3 +12,7 @@ require_once __DIR__ . ('/../pages/login.php');
 
 // rotas js
 // require_once __DIR__ . ('/../public/scripts/');
+
+// rotas erros
+
+

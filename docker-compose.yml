@@ -1,6 +1,6 @@
 services:
   webserver:
-    container_name: php
+    container_name: visitantes
     build:
       context: .
       dockerfile: Dockerfile

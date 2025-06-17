@@ -57,3 +57,8 @@
       margin-bottom: 10px;
       text-align: center;
     }
+
+    .erro-login{
+      color: red;
+      text-align: center;
+    }
