@@ -1,62 +1,73 @@
- body {
-      margin: 0;
-      padding: 0;
-      font-family: "Segoe UI", sans-serif;
-      background: #f0f2f5;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-    }
-
-    
-header{
-
+body.home {
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", sans-serif;
+  background: linear-gradient(to right, #e0eafc, #cfdef3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
 }
 
-    .painel-container {
-      background-color: #fff;
-      padding: 40px;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      text-align: center;
-      max-width: 800px;
-      width: 90%;
-    }
+.painel-container {
+  background-color: #ffffff;
+  padding: 50px 40px;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 90%;
+  max-width: 600px;
+}
 
-    .painel-container h1 {
-      margin-bottom: 20px;
-      color: #333;
-    }
+.painel-container h1 {
+  font-size: 28px;
+  color: #333;
+  margin-bottom: 10px;
+}
 
-    .painel-container p {
-      margin-top: 30px;
-    }
+.painel-container p {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 30px;
+}
 
-    .sairsistema {
-      display: inline-block;
-      padding: 10px 20px;
-      background-color: #e63946;
-      color: #fff;
-      border-radius: 8px;
-      text-decoration: none;
-      transition: background 0.3s ease;
-    }
+.botoes-painel {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
 
-     .entrarcadastro {
-      display: inline-block;
-      padding: 10px 20px;
-      background-color: #007bff;
-      color: #fff;
-      border-radius: 8px;
-      text-decoration: none;
-      transition: background 0.3s ease;
-    }
+.entrarcadastro,
+.sairsistema {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 20px;
+  font-size: 16px;
+  font-weight: 500;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
 
-     .entrarcadastro:hover {
-      background-color: #015dbe;
-    }
+.entrarcadastro {
+  background-color: #007bff;
+  color: #fff;
+}
 
-    .sairsistema:hover {
-      background-color: #d62839;
-    }
+.entrarcadastro:hover {
+  background-color: #0056b3;
+  transform: translateY(-2px);
+}
+
+.sairsistema {
+  background-color: #dc3545;
+  color: #fff;
+}
+
+.sairsistema:hover {
+  background-color: #c82333;
+  transform: translateY(-2px);
+}
