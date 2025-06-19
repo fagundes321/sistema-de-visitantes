@@ -1,16 +1,28 @@
-body, html {
+body,
+html {
   margin: 0;
   padding: 0;
-  font-family: 'Segoe UI', sans-serif;
+  font-family: "Segoe UI", sans-serif;
   background: #f4f6f9;
-  width: ;
+  background: linear-gradient(to right, #e6eaf3, #d4e0f0);
+  padding-top: 70px;
 }
 
-.container-dashboard {
+/* .container-dashboard {
   max-width: 1000px;
+  height: 93vh; 
   margin: 50px auto;
   padding: 20px;
   text-align: center;
+} */
+
+.container-dashboard {
+  width: 60vw; /* largura total da viewport */
+  /* altura total da viewport */
+  margin: 50px auto; /* remove margens externas */
+  padding: 20px; /* mantém um espaçamento interno */
+  text-align: center; /* centraliza o conteúdo em texto */
+  box-sizing: border-box;
 }
 
 .titulo-pagina {
@@ -34,7 +46,7 @@ body, html {
   border-radius: 6px;
   cursor: pointer;
   transition: background 0.3s ease, transform 0.2s ease;
-  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
 }
 
 .botao-registrar {
@@ -60,7 +72,7 @@ body, html {
 .card-tabela {
   background: white;
   border-radius: 10px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.05);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
   padding: 20px;
   overflow-x: auto;
 }

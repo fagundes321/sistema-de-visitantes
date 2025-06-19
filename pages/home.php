@@ -11,10 +11,12 @@ require_once __DIR__ . ('/template/navbar.php');
 
     <div class="botoes-painel">
       <a href="visitantes.php" class="entrarcadastro">
-        <i class="bi bi-person-lines-fill"></i> Acessar Visitantes
+        <i class="fa-solid fa-user-plus"></i> Acessar Visitantes
+        
+        
       </a>
       <a href="logout.php" class="sairsistema">
-        <i class="bi bi-box-arrow-right"></i> Sair do Sistema
+        <i class="bi bi-box-arrow-right"></i> <i class="fa-solid fa-right-from-bracket"></i>Sair do Sistema
       </a>
     </div>
   </div>

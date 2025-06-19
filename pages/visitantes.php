@@ -1,28 +1,28 @@
 <?php
 // navbar
 require_once __DIR__ . ('/template/navbar.php');
-?>
+require_once __DIR__ . ('/../routes/rotas.php');
 
-<!DOCTYPE html>
+$visitantes = [];
+
+$sql = $pdo->query("SELECT * FROM visitantes.dados_visitantes");
+
+// verificação se o numero de linhas é maior que 0, para ver se tem algum dado
+
+if ($sql->rowCount() > 0) {
+    $visitantes = $sql->fetchALL(PDO::FETCH_ASSOC);
+}
+
+?><!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <title>Visitantes</title>
-    <!-- Link do seu CSS, se houver -->
 </head>
 <body class="visitantes">
 
     <div class="div-mae">
-        <!-- Formulário de Registro -->
-        <!-- <form class="formRegistro" action="registrar_visitante.php" method="POST">
-            <input type="text" name="nome" id="nome" placeholder="Nome do visitante" required>
-            <input type="submit" value="Registrar" class="botao-registrar">
-        </form> -->
 
-        <!-- Botão de Relatório -->
-        <!-- <form action="gerar_relatorio.php" method="POST" style="margin-top: 10px;">
-            <button type="submit" class="botao-relatorio">Gerar Relatório</button>
-        </form> -->
 
         <!-- Tabela de Visitantes -->
         <div class="container-dashboard">
@@ -53,16 +53,18 @@ require_once __DIR__ . ('/template/navbar.php');
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td>1</td>
-                    <td>55555</td>
-                    <td>João Silva</td>
-                    <td>Ajudância</td>
-                    <td>Cirilo</td>
-                    <td>10:32</td>
-                    <td>15:10</td>
-                    <td>2025-06-18</td>
-                </tr>
+                <?php foreach ($visitantes as $dados): ?>
+                    <tr>
+                        <td><?= $dados['id'] ?></td>
+                        <td><?= $dados['rg'] ?></td>
+                        <td><?= $dados['nome'] ?></td>
+                        <td><?= $dados['destino']?></td>
+                        <td><?= $dados['responsavel'] ?></td>
+                        <td><?= $dados['hora_entrada'] ?></td>
+                        <td><?= $dados['hora_saida'] ?></td>
+                        <td><?= $dados['data'] ?></td>
+                    </tr>
+                <?php endforeach ?>
                 <!-- outros visitantes... -->
             </tbody>
         </table>

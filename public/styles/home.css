@@ -2,11 +2,12 @@ body.home {
   margin: 0;
   padding: 0;
   font-family: "Segoe UI", sans-serif;
-  background: linear-gradient(to right, #e0eafc, #cfdef3);
+  background: linear-gradient(to right, #e6eaf3, #d4e0f0);
   display: flex;
   align-items: center;
   justify-content: center;
   height: 100vh;
+  padding-top: 70px;
 }
 
 .painel-container {

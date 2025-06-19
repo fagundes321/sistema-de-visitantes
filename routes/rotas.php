@@ -4,7 +4,6 @@
 require_once __DIR__ . ('/../config/database/conn.php');
 
 // rota das paginas
-require_once __DIR__ . ('/../pages/login.php');
 
 // // rotas do css
 // require_once __DIR__ . ('/../public/styles/index.css');
