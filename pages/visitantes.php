@@ -36,7 +36,7 @@ if ($sql->rowCount() > 0) {
                 <table class="tabela-visitantes">
                     <thead>
                         <tr>
-                            <th class="col-hide">ID</th>
+                           
                             <th class="col-hide">RG</th>
                             <th>Visitante</th>
                             <th>Destino</th>
@@ -50,7 +50,6 @@ if ($sql->rowCount() > 0) {
                     <tbody>
                         <?php foreach ($visitantes as $dados): ?>
                             <tr class="lista_dados">
-                                <td class="col-hide"><?= $dados['id'] ?></td>
                                 <td class="col-hide"><?= $dados['rg'] ?></td>
                                 <td><?= $dados['nome'] ?></td>
                                 <td><?= $dados['destino'] ?></td>
@@ -66,7 +65,14 @@ if ($sql->rowCount() > 0) {
                                     ?>
                                 </td>
                                 <td class="col-hide"><?= date('d/m', strtotime($dados['data_dia'])) ?></td>
-                                <td>teste</td>
+                                <td class="acoes">
+                                    <a class="update" href="">
+                                    <i class="fa-regular fa-pen-to-square"></i>
+                                    </a>
+                                    <a class="delete" href="/actions/delete.php?id=<?= $dados['id']?>">
+                                        <i class="fa-solid fa-trash"></i>
+                                    </a>
+                                </td>
                             </tr>
                         <?php endforeach ?>
 

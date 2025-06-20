@@ -52,7 +52,9 @@ require_once __DIR__ . ('/template/navbar.php');
 
       <div class="text-end">
         <button type="submit" class="btn btn-success">Registrar</button>
+      <a href="/pages/visitantes.php" class=" btn btn-danger">Cancelar</a>  
       </div>
+      
     </form>
   </div>
 
