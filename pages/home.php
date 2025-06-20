@@ -16,7 +16,7 @@ require_once __DIR__ . ('/template/navbar.php');
         
       </a>
       <a href="logout.php" class="sairsistema">
-        <i class="bi bi-box-arrow-right"></i> <i class="fa-solid fa-right-from-bracket"></i>Sair do Sistema
+       <i class="fa-solid fa-right-from-bracket"></i>Sair do Sistema
       </a>
     </div>
   </div>

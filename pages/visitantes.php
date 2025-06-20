@@ -66,12 +66,18 @@ if ($sql->rowCount() > 0) {
                                 </td>
                                 <td class="col-hide"><?= date('d/m', strtotime($dados['data_dia'])) ?></td>
                                 <td class="acoes">
-                                    <a class="update" href="">
-                                    <i class="fa-regular fa-pen-to-square"></i>
+                                     <a class="exit" href="#">
+                                        <i class="fa-solid fa-right-from-bracket"></i>
                                     </a>
+                                    <!-- <a class="update" href="">
+                                    <i class="fa-regular fa-pen-to-square"></i>
+                                    </a> -->
+                                    
                                     <a class="delete" href="/actions/delete.php?id=<?= $dados['id']?>">
                                         <i class="fa-solid fa-trash"></i>
                                     </a>
+                                   
+                                    
                                 </td>
                             </tr>
                         <?php endforeach ?>
