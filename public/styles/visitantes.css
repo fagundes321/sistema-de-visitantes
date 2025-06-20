@@ -1,100 +1,121 @@
-body,
-html {
-  margin: 0;
-  padding: 0;
-  font-family: "Segoe UI", sans-serif;
-  background: #f4f6f9;
-  background: linear-gradient(to right, #e6eaf3, #d4e0f0);
-  padding-top: 70px;
-}
+body {
+      margin: 0;
+      padding: 0;
+      font-family: "Segoe UI", sans-serif;
+      background: linear-gradient(to right, #e6eaf3, #d4e0f0);
+    }
 
-/* .container-dashboard {
-  max-width: 1000px;
-  height: 93vh; 
-  margin: 50px auto;
-  padding: 20px;
-  text-align: center;
-} */
+    .container-dashboard {
+      max-width: 1000px;
+      margin: 100px auto 30px auto;
+      padding: 20px;
+    }
 
-.container-dashboard {
-  width: 60vw; /* largura total da viewport */
-  /* altura total da viewport */
-  margin: 50px auto; /* remove margens externas */
-  padding: 20px; /* mantém um espaçamento interno */
-  text-align: center; /* centraliza o conteúdo em texto */
-  box-sizing: border-box;
-}
+    .titulo-pagina {
+      color: #333;
+      margin-bottom: 30px;
+      text-align: center;
+    }
 
-.titulo-pagina {
-  font-size: 28px;
-  color: #333;
-  margin-bottom: 30px;
-}
+    .botoes-acao {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
 
-.botoes-acao {
-  display: flex;
-  justify-content: center;
-  gap: 15px;
-  margin-bottom: 20px;
-}
+    .botao-registrar,
+    .botao-relatorio {
+      padding: 10px 18px;
+      font-size: 15px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+      text-decoration: none;
+      transition: all 0.3s ease;
+      color: white;
+    }
 
-.botao-registrar,
-.botao-relatorio {
-  padding: 12px 20px;
-  font-size: 16px;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: background 0.3s ease, transform 0.2s ease;
-  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
-}
+    .botao-registrar {
+      background-color: #28a745;
+    }
 
-.botao-registrar {
-  background-color: #28a745;
-  color: white;
-}
+    .botao-relatorio {
+      background-color: #17a2b8;
+    }
 
-.botao-relatorio {
-  background-color: #17a2b8;
-  color: white;
-}
+    .botao-registrar:hover {
+      background-color: #218838;
+      transform: scale(1.03);
+    }
 
-.botao-registrar:hover {
-  background-color: #218838;
-  transform: scale(1.03);
-}
+    .botao-relatorio:hover {
+      background-color: #138496;
+      transform: scale(1.03);
+    }
 
-.botao-relatorio:hover {
-  background-color: #138496;
-  transform: scale(1.03);
-}
+    .card-tabela {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+      padding: 20px;
+    }
 
-.card-tabela {
-  background: white;
-  border-radius: 10px;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
-  padding: 20px;
-  overflow-x: auto;
-}
+    .table-responsive {
+      overflow-x: auto;
+    }
 
-.tabela-visitantes {
-  width: 100%;
-  border-collapse: collapse;
-  font-size: 15px;
-}
+    .tabela-visitantes {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 14px;
+    }
 
-.tabela-visitantes thead {
-  background-color: #007bff;
-  color: white;
-}
+    .tabela-visitantes thead {
+      background-color: #007bff;
+      color: white;
+    }
 
-.tabela-visitantes th,
-.tabela-visitantes td {
-  padding: 12px 15px;
-  border-bottom: 1px solid #ddd;
-  text-align: center;
-}
+    .tabela-visitantes th,
+    .tabela-visitantes td {
+      padding: 10px;
+      text-align: center;
+      border-bottom: 1px solid #ddd;
+    }
 
-.tabela-visitantes tr:hover {
-  background-color: #f2f2f2;
-}
+    .tabela-visitantes tbody {
+      display: block;
+      max-height: 800px;
+      overflow-y: auto;
+    }
+
+    .tabela-visitantes thead,
+    .tabela-visitantes tbody tr {
+      display: table;
+      width: 100%;
+      table-layout: fixed;
+    }
+
+    .lista_dados:hover {
+      background-color: #f2f2f2;
+    }
+
+    /* Esconder colunas no mobile */
+    @media (max-width: 768px) {
+      .col-hide {
+        display: none;
+       
+      }
+
+      .tabela-visitantes th,
+      .tabela-visitantes td {
+        font-size: 12px;
+        padding: 6px;
+      }
+
+      .titulo-pagina {
+        font-size: 18px;
+      }
+    }

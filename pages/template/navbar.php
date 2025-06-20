@@ -26,7 +26,7 @@ require_once __DIR__ . ('/header.php')
             <a class="nav-link" href="/pages/visitantes.php">Visitantes</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Preços</a>
+            <a class="nav-link" href="/pages/registrarVisitantes.php">Cadastro</a>
           </li>
         </ul>
         <!-- Alinhado à direita -->
