@@ -13,6 +13,10 @@ if ($sql->rowCount() > 0) {
     $visitantes = $sql->fetchALL(PDO::FETCH_ASSOC);
 }
 
+$hoje = date('d/m/Y');
+
+
+
 ?>
 
 <head>
@@ -47,6 +51,8 @@ if ($sql->rowCount() > 0) {
                     </thead>
                     <tbody>
                         <?php foreach ($visitantes as $dados): ?>
+                            <?php 
+                                if (date('d/m/Y', strtotime($dados['data_dia'])) == $hoje): ?>
                             <tr class="lista_dados">
                                 <td class="col-hide"><?= $dados['rg'] ?></td>
                                 <td><?= $dados['nome'] ?></td>
@@ -64,23 +70,29 @@ if ($sql->rowCount() > 0) {
                                 </td>
                                 <td class="col-hide"><?= date('d/m', strtotime($dados['data_dia'])) ?></td>
                                 <td class="acoes">
+                                    <!-- Considicional normal -->
                                     <?php
-                                    if ($dados['saida'] == 0) {
-                                        echo '<a class="exit" href="/actions/update.php?id=' . $dados['id'] . '">';
-                                        echo '<i class="fa-solid fa-right-from-bracket"></i>';
-                                        echo '</a>';
-                                    } else {
-                                        echo '';
-                                    }
+                                    // if ($dados['saida'] == 0) {
+                                    //     echo '<a class="exit" href="/actions/update.php?id=' . $dados['id'] . '">';
+                                    //     echo '<i class="fa-solid fa-right-from-bracket"></i>';
+                                    //     echo '</a>';
+                                    // } else {
+                                    //     echo '';
+                                    // }
                                     ?>
+
+                                    <!-- condicional por ternario -->
+                                    <?= $dados['saida'] == 0 ? '<a class="exit" href="/actions/update.php?id=' . $dados['id'] . '"><i class="fa-solid fa-right-from-bracket"></i></a>' : '' ?>
+
 
                                     <!-- <a class="delete" href="/actions/delete.php?id=<?= $dados['id'] ?>">
                                         <i class="fa-solid fa-trash"></i>
                                     </a> -->
-
-
                                 </td>
                             </tr>
+                            <?php else: ?>
+                                <p>deu errado</p>
+                            <?php endif;?>
                         <?php endforeach ?>
 
                     </tbody>
