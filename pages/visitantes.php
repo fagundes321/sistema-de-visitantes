@@ -14,8 +14,6 @@ if ($sql->rowCount() > 0) {
 }
 
 ?>
-<!DOCTYPE html>
-<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
@@ -36,7 +34,7 @@ if ($sql->rowCount() > 0) {
                 <table class="tabela-visitantes">
                     <thead>
                         <tr>
-                           
+
                             <th class="col-hide">RG</th>
                             <th>Visitante</th>
                             <th>Destino</th>
@@ -66,18 +64,21 @@ if ($sql->rowCount() > 0) {
                                 </td>
                                 <td class="col-hide"><?= date('d/m', strtotime($dados['data_dia'])) ?></td>
                                 <td class="acoes">
-                                     <a class="exit" href="#">
-                                        <i class="fa-solid fa-right-from-bracket"></i>
-                                    </a>
-                                    <!-- <a class="update" href="">
-                                    <i class="fa-regular fa-pen-to-square"></i>
-                                    </a> -->
-                                    
-                                    <a class="delete" href="/actions/delete.php?id=<?= $dados['id']?>">
+                                    <?php
+                                    if ($dados['saida'] == 0) {
+                                        echo '<a class="exit" href="/actions/update.php?id=' . $dados['id'] . '">';
+                                            echo '<i class="fa-solid fa-right-from-bracket"></i>';
+                                        echo '</a>';
+                                    } else {
+                                        echo '';
+                                    }
+                                    ?>
+
+                                    <!-- <a class="delete" href="/actions/delete.php?id=<?= $dados['id'] ?>">
                                         <i class="fa-solid fa-trash"></i>
-                                    </a>
-                                   
-                                    
+                                    </a> -->
+
+
                                 </td>
                             </tr>
                         <?php endforeach ?>
