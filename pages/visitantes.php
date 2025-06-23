@@ -91,7 +91,7 @@ $hoje = date('d/m/Y');
                                 </td>
                             </tr>
                             <?php else: ?>
-                                <p>deu errado</p>
+                                
                             <?php endif;?>
                         <?php endforeach ?>
 
