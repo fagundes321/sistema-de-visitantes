@@ -67,7 +67,7 @@ if ($sql->rowCount() > 0) {
                                     <?php
                                     if ($dados['saida'] == 0) {
                                         echo '<a class="exit" href="/actions/update.php?id=' . $dados['id'] . '">';
-                                            echo '<i class="fa-solid fa-right-from-bracket"></i>';
+                                        echo '<i class="fa-solid fa-right-from-bracket"></i>';
                                         echo '</a>';
                                     } else {
                                         echo '';
