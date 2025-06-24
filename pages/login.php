@@ -1,14 +1,16 @@
 <?php
 require_once __DIR__ . '/../routes/rotas.php';
 
+$erroLogin = '';
+
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $usuario = $_POST['usuario'] ?? '';
     $senha = $_POST['senha'] ?? '';
 
     if (empty($usuario)) {
-        echo "<p class='erro-login'>Preencha seu e-mail</p>";
+        $erroLogin = "Preencha seu e-mail";
     } elseif (empty($senha)) {
-        echo "<p class='erro-login'>Preencha sua senha</p>";
+        $erroLogin = "Preencha sua senha";
     } else {
         try {
             $stmt = $pdo->prepare("SELECT * FROM usuarios WHERE usuario = :usuario AND senha = :senha");
@@ -27,10 +29,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 header("Location: pages/home.php");
                 exit();
             } else {
-                echo "<p class='erro-login'>Falha ao logar! E-mail ou senha incorretos</p>";
+                $erroLogin = "Falha ao logar! E-mail ou senha incorretos";
             }
         } catch (PDOException $e) {
-            echo "<p class='erro-login'>Erro na consulta: " . $e->getMessage() . "</p>";
+            $erroLogin = "Erro na consulta: " . $e->getMessage() ;
         }
     }
 }
@@ -57,7 +59,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             </div>
             <br><br><br>
             <h1>Acesse sua conta</h1>
-            <br>
+            
+            <div>
+                <?php if (!empty($erroLogin)): ?>
+                    <p class="mensagem-erro"><?= $erroLogin ?></p>
+                <?php else:?>
+                    <br><br>
+                <?php endif; ?>
+            </div>    
             <form action="" method="post" class="">
                 <label for="usuario">Usuário</label>
                 <input type="text" name="usuario" id="usuario" required />

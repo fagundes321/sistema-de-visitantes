@@ -15,7 +15,7 @@ require_once __DIR__ . ('/template/navbar.php');
 
 
       </a>
-      <a href="gerar_relatorio.php" class="botao-relatorio"><i class="fa-solid fa-file-invoice"></i> Gerar Relatório</a>
+      <a href="gerarRelatorio.php" class="botao-relatorio"><i class="fa-solid fa-file-invoice"></i> Gerar Relatório</a>
       <a href="historico.php" class="botao-historico"><i class="fa-solid fa-clock-rotate-left"></i> Historico</a>
       <a href="logout.php" class="sairsistema">
         <i class="fa-solid fa-right-from-bracket"></i>Sair do Sistema
