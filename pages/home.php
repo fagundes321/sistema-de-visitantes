@@ -12,11 +12,13 @@ require_once __DIR__ . ('/template/navbar.php');
     <div class="botoes-painel">
       <a href="visitantes.php" class="entrarcadastro">
         <i class="fa-solid fa-user-plus"></i> Acessar Visitantes
-        
-        
+
+
       </a>
+      <a href="gerar_relatorio.php" class="botao-relatorio"><i class="fa-solid fa-file-invoice"></i> Gerar Relatório</a>
+      <a href="gerarHistorico.php" class="botao-historico"><i class="fa-solid fa-clock-rotate-left"></i> Historico</a>
       <a href="logout.php" class="sairsistema">
-       <i class="fa-solid fa-right-from-bracket"></i>Sair do Sistema
+        <i class="fa-solid fa-right-from-bracket"></i>Sair do Sistema
       </a>
     </div>
   </div>
@@ -25,4 +27,5 @@ require_once __DIR__ . ('/template/navbar.php');
     integrity="sha384-qRBjS+x4RoDAUYe6bZt3AAlh1c9xvQdn1XrY+S7VoFqCE6msXW/7hw+2ZjH4LoSe"
     crossorigin="anonymous"></script>
 </body>
+
 </html>

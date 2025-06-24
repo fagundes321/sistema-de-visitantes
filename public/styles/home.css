@@ -60,7 +60,7 @@ body.home {
 
 .entrarcadastro:hover {
   background-color: #0056b3;
-  transform: translateY(-2px);
+  transform: scale(1.03);
 }
 
 .sairsistema {
@@ -70,5 +70,5 @@ body.home {
 
 .sairsistema:hover {
   background-color: #c82333;
-  transform: translateY(-2px);
+  transform: scale(1.03);
 }

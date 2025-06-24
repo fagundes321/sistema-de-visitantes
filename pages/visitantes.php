@@ -31,7 +31,8 @@ $hoje = date('d/m/Y');
 
             <div class="botoes-acao">
                 <a href="registrarVisitantes.php" class="botao-registrar">➕ Registrar Visitante</a>
-                <a href="gerar_relatorio.php" class="botao-relatorio">📄 Gerar Relatório</a>
+                <!-- <a href="gerar_relatorio.php" class="botao-relatorio">📄 Gerar Relatório</a> -->
+                <!-- <a href="gerarHistorico.php" class="botao-historico"><i class="fa-solid fa-clock-rotate-left"></i> Historico</a> -->
             </div>
 
             <div class="table-responsive">
