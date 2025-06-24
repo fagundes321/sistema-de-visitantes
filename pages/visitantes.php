@@ -19,10 +19,7 @@ $hoje = date('d/m/Y');
 
 ?>
 
-<head>
-    <meta charset="UTF-8">
-    <title>Visitantes</title>
-</head>
+
 
 <body class="visitantes">
     <div class="container-dashboard">

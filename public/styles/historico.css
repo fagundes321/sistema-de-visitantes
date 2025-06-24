@@ -1,0 +1,129 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", sans-serif;
+  background: linear-gradient(to right, #e6eaf3, #d4e0f0);
+}
+
+.historico-container {
+  max-width: 1000px;
+  margin: 100px auto 30px auto;
+  padding: 20px;
+}
+
+.historico-titulo {
+  color: #333;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.historico-card {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+  padding: 20px;
+}
+
+.historico-table-wrapper {
+  overflow-x: auto;
+}
+
+.historico-tabela {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.historico-tabela thead {
+  background-color: #007bff;
+  color: white;
+}
+
+.historico-tabela th,
+.historico-tabela td {
+  padding: 10px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+.historico-tabela tbody {
+  display: block;
+  max-height: 800px;
+  overflow-y: auto;
+}
+
+.historico-tabela thead,
+.historico-tabela tbody tr {
+  display: table;
+  /* border-left: 1px solid #bdbdbe;
+  border-right: 1px solid #bdbdbe; */
+  border-radius: 10px;
+  width: 100%;
+  table-layout: fixed;
+}
+
+.historico-linha:hover {
+  background-color: #f2f2f2;
+}
+
+.historico-data {
+  margin-top: 40px;
+  margin-bottom: 10px;
+  font-size: 18px;
+  background: #f0f8ff;
+  padding: 10px 15px;
+  border-left: 4px solid #3498db;
+  border-radius: 5px;
+  color: #2c3e50;
+}
+
+/* Esconder colunas no mobile */
+@media (max-width: 768px) {
+  .historico-oculto {
+    display: none;
+  }
+
+  .historico-tabela th,
+  .historico-tabela td {
+    
+    font-size: 12px;
+    padding: 6px;
+  }
+
+  .historico-titulo {
+    font-size: 18px;
+  }
+}
+
+.delete {
+  text-decoration: none;
+  font-size: 20px;
+  color: red;
+}
+
+.update {
+  text-decoration: none;
+  font-size: 20px;
+  color: #007bff;
+}
+
+.exit {
+  text-decoration: none;
+  font-size: 20px;
+  color: #06421a;
+}
+
+
+.data-titulo {
+    margin-top: 40px;
+    margin-bottom: 1px;
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #2c3e50;
+    /* background-color: #ecf0f1; */
+    padding: 10px 20px;
+    border-left: 2px solid #3498db;
+    border-radius: 10px;
+    /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
+}
+
