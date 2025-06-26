@@ -5,7 +5,8 @@ require_once __DIR__ . ('/../routes/rotas.php');
 
 $visitantes = [];
 
-$sql = $pdo->query("SELECT * FROM visitantes.dados_visitantes");
+// $sql = $pdo->query("SELECT * FROM visitantes.dados_visitantes");
+$sql = $pdo->query("SELECT * FROM visitantes.dados_visitantes ORDER BY data_dia DESC, hora_entrada DESC ");
 
 // verificação se o numero de linhas é maior que 0, para ver se tem algum dado
 

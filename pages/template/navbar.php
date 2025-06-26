@@ -2,7 +2,7 @@
 require_once __DIR__ . ('/../../config/protect/protectLogin.php');
 require_once __DIR__ . ('/header.php')
 ?>
-
+<link rel="icon" type="image/x-icon" href="/public/image/icon.svg">
 <header>
   <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top shadow-sm">
     <div class="container-fluid">

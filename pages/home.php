@@ -11,7 +11,7 @@ require_once __DIR__ . ('/template/navbar.php');
 
     <div class="botoes-painel">
       <a href="visitantes.php" class="entrarcadastro">
-        <i class="fa-solid fa-user-plus"></i> Acessar Visitantes
+        <i class="fa-solid fa-user-plus"></i> <img src="/public/image/registrarVisitantes.svg" class="registrarVisitantes">  Acessar Visitantes
 
 
       </a>

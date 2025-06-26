@@ -59,15 +59,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   <link rel="stylesheet" href="../public/styles/login.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="icon" type="image/x-icon" href="/public/image/icon.svg">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
 
-  <title>Login</title>
+  <title>Visitantes</title>
 </head>
 
 <body>
   <div class="login-container">
     <div class="text-center mb-3">
-      <i class="aumentar-icone fa-solid fa-users-gear"></i>
+      <!-- <i class="aumentar-icone fa-solid fa-users-gear"></i> -->
+      <img class="aumentar-icone" src="/public/image/icon.svg" alt="">
       <h2 class="mt-3">Acesse sua conta</h2>
     </div>
 

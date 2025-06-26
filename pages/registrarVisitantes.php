@@ -3,38 +3,9 @@
 require_once __DIR__ . '/../routes/rotas.php';
 
 // Inclui a barra de navegação da interface
-require_once __DIR__ . '/template/navbar.php';
+// require_once __DIR__ . '/template/navbar.php';
+include __DIR__ . '/../actions/create.php'
 
-// Inicializa variáveis de erro para cada campo do formulário
-$erroRG = '';
-$erroNome = '';
-$erroDestino = '';
-$erroResponsavel = '';
-
-// Pega os valores enviados via POST, ou atribui string vazia se não enviados ainda
-$rg = $_POST['rg'] ?? '';
-$nome = $_POST['nome'] ?? '';
-$destino = $_POST['destino'] ?? '';
-$responsavel = $_POST['responsavel'] ?? '';
-
-// Verifica se o formulário foi enviado via método POST
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-
-    // Verifica se os campos estão vazios e atribui mensagens de erro
-    if (empty($rg)) $erroRG = 'Informe o RG';
-    if (empty($nome)) $erroNome = 'Informe o nome';
-    if (empty($destino)) $erroDestino = 'Informe o destino';
-    if (empty($responsavel)) $erroResponsavel = 'Informe o responsável';
-
-    // Se nenhum erro foi encontrado nos campos
-    if (!$erroRG && !$erroNome && !$erroDestino && !$erroResponsavel) {
-
-        // Redireciona para o arquivo create.php que irá realizar o salvamento no banco de dados
-        // (OBS: Aqui não está salvando diretamente, apenas redirecionando)
-        header("Location: /actions/create.php");
-        exit(); // Encerra a execução para evitar que o restante do script rode após o redirecionamento
-    }
-}
 ?>
 
 
@@ -63,7 +34,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <div class="container mt-5 form-container bg-white p-4 rounded shadow">
         <h3 class="mb-4 text-center text-primary">➕ Registrar Visitante</h3>
 
-        <form action="" method="POST">
+        <form action="/actions/create.php" method="POST">
             <div class="row g-3 mb-3">
                 <div class="col-md-4">
                     <label for="rg" class="form-label">RG</label>
