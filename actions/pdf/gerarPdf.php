@@ -6,6 +6,7 @@ date_default_timezone_set('America/Sao_Paulo');
 
 $dataFiltro = $_GET['data'];
 
+$data = date('d-m-Y', strtotime($dataFiltro));
 
 
 ob_start(); // Inicia o buffer de saída
@@ -27,7 +28,7 @@ $dompdf->setPaper('A4');
 $dompdf->render();
 
 // Envia o PDF para o navegador (como download)
-$dompdf->stream('arquivo.pdf', [
+$dompdf->stream('Relatorio_Visitantes_' . $data . '.pdf', [
     'Attachment' => false // true = download / false = abrir no navegador
     ]);
 ?>

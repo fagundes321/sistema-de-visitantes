@@ -19,7 +19,7 @@ if ($dataFiltro) {
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <title>Relatório de Visitantes</title>
+    <!-- <title>Relatório de Visitantes</title> -->
     <style>
         body {
             font-family: DejaVu Sans, sans-serif;
