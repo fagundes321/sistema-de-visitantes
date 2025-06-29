@@ -7,8 +7,7 @@ require_once __DIR__ . ('/header.php')
   <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top shadow-sm">
     <div class="container-fluid">
       <a class="navbar-brand" href="/pages/home.php">
-
-        <i class="fa-solid fa-id-card"></i>
+        <img src="/public/image/iconNavBar.svg" style="width: 22px;" alt="">
         Visitantes</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
         data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"

@@ -75,7 +75,9 @@ body.home {
 
 
 .iconRegistrarVisitantes,
-.iconGerarRelatorio {
+.iconGerarRelatorio,
+.iconHistorico,
+.iconSairDoSistema {
 
  
   width: 20px;

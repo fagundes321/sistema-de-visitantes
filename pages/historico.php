@@ -17,7 +17,7 @@ $dataAtual = null;
 <body class="historico">
     <div class="historico-container">
         <div class="historico-card">
-            <h2 class="historico-titulo"><i class="fa-solid fa-clock-rotate-left"></i> Histórico</h2>
+            <h2 class="historico-titulo"><img src="/public/image/historicoTitulo.svg" alt="" class="historicoTitulo "> Histórico</h2>
 
             <div class="historico-table-wrapper">
                 <table class="historico-tabela">

@@ -14,9 +14,9 @@ require_once __DIR__ . ('/template/navbar.php');
         <img src="/public/image/registrarVisitantes.svg" class="iconRegistrarVisitantes"> Acessar Visitantes
       </a>
       <a href="gerarRelatorio.php" class="botao-relatorio"><img src="/public/image/gerarRelatorio.svg" class="iconGerarRelatorio" alt=""> Gerar Relatório</a>
-      <a href="historico.php" class="botao-historico"><i class="fa-solid fa-clock-rotate-left"></i> Histórico</a>
+      <a href="historico.php" class="botao-historico"><img src="/public/image/historico.svg" alt="" class="iconHistorico"> Histórico</a>
       <a href="logout.php" class="sairsistema">
-        <i class="fa-solid fa-right-from-bracket"></i>Sair do Sistema
+        <img src="/public/image/sairDoSistema.svg" alt="" class="iconSairDoSistema">Sair do Sistema
       </a>
     </div>
   </div>
