@@ -28,7 +28,7 @@ $dataAtual = null;
   <div class="relatorio-dashboard">
     <div class="relatorio-card">
       <h1 class="relatorio-titulo">
-        <i class="fa-solid fa-file-invoice"></i> Gerar Relatório
+        <i class="fa-solid fa-file-invoice"></i> <img src="/public/image/gerarRelatorioBlack.svg" alt="" class="iconGerarRelatorio"> Gerar Relatório
       </h1>
 
       <form action="" method="GET" class="form-pesquisa">

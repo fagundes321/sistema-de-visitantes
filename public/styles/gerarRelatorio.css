@@ -19,11 +19,10 @@ body {
 }
 
 .relatorio-titulo {
-   color: #333;
+  color: #333;
   margin-bottom: 30px;
   text-align: center;
 }
-
 
 .form-pesquisa {
   margin-bottom: 30px;
@@ -63,4 +62,10 @@ body {
 
 .botao-pesquisa:hover {
   background-color: #0056b3;
+}
+
+.iconGerarRelatorio {
+  width: 50px;
+  position: relative;
+  top: -3px;
 }
