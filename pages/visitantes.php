@@ -84,9 +84,9 @@ $hoje = date('d/m/Y');
                                     <?= $dados['saida'] == 0 ? '<a class="exit" href="/actions/update.php?id=' . $dados['id'] . '"><i class="fa-solid fa-right-from-bracket"></i></a>' : '' ?>
 
 
-                                    <!-- <a class="delete" href="/actions/delete.php?id=<?= $dados['id'] ?>">
+                                    <a class="delete" href="/actions/delete.php?id=<?= $dados['id'] ?>">
                                         <i class="fa-solid fa-trash"></i>
-                                    </a> -->
+                                    </a>
                                 </td>
                             </tr>
                             <?php else: ?>

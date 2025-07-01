@@ -26,9 +26,9 @@ body {
   margin-bottom: 20px;
 }
 
-.botao-registrar,
-.botao-relatorio,
-.botao-historico {
+.botao-registrar
+/* .botao-relatorio, */
+ {
    display: inline-flex;
   align-items: center;
   gap: 8px;
@@ -46,15 +46,12 @@ body {
   background-color: #28a745;
 }
 
-.botao-relatorio {
-  background-color: #17a2b8;
-  padding: 12px 25px;
-}
 
-.botao-historico {
+
+/* .botao-historico {
   background-color: #333333;
   padding: 12px 62px;
-}
+} */
 
 .botao-registrar:hover {
   background-color: #218838;
@@ -66,10 +63,6 @@ body {
   transform: scale(1.03);
 }
 
-.botao-historico:hover {
-  background-color: #333333;
-  transform: scale(1.03);
-}
 
 .card-tabela {
   background: white;

@@ -3,7 +3,7 @@
 require_once __DIR__ . '/../routes/rotas.php';
 
 // Inclui a barra de navegação da interface
-// require_once __DIR__ . '/template/navbar.php';
+require_once __DIR__ . '/template/navbar.php';
 include __DIR__ . '/../actions/create.php'
 
 ?>
