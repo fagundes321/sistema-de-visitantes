@@ -21,7 +21,7 @@ $dataAtual = null;
 
             <div class="historico-table-wrapper">
                 <table class="historico-tabela">
-                    <?php foreach ($visitantes as $dados): 
+                    <?php foreach ($visitantes as $dados):
                         $dataFormatada = date('d/m/Y', strtotime($dados['data_dia']));
 
                         if ($dataAtual !== $dataFormatada):
@@ -30,37 +30,37 @@ $dataAtual = null;
                             }
                             $dataAtual = $dataFormatada;
                     ?>
-                        <h3 class="data-titulo"><?= $dataAtual ?></h3>
-                        <table class="historico-tabela">
-                            <thead>
-                                <tr>
-                                    <th class="historico-oculto">RG</th>
-                                    <th>Visitante</th>
-                                    <th>Destino</th>
-                                    <th>Responsável</th>
-                                    <th>Entrada</th>
-                                    <th>Saída</th>
-                                    <th class="historico-oculto">Data</th>
+                            <h3 class="data-titulo"><?= $dataAtual ?></h3>
+                            <table class="historico-tabela">
+                                <thead>
+                                    <tr>
+                                        <th class="historico-oculto">RG</th>
+                                        <th>Visitante</th>
+                                        <th>Destino</th>
+                                        <th>Responsável</th>
+                                        <th>Entrada</th>
+                                        <th>Saída</th>
+                                        <th class="historico-oculto">Data</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                <?php endif; ?>
+
+                                <tr class="historico-linha">
+                                    <td class="historico-oculto"><?= $dados['rg'] ?></td>
+                                    <td><?= $dados['nome'] ?></td>
+                                    <td><?= $dados['destino'] ?></td>
+                                    <td><?= $dados['responsavel'] ?></td>
+                                    <td><?= date('H:i', strtotime($dados['hora_entrada'])) ?></td>
+                                    <td><?= $dados['hora_saida'] ? date('H:i', strtotime($dados['hora_saida'])) : '-' ?></td>
+                                    <td class="historico-oculto"><?= date('d/m/Y', strtotime($dados['data_dia'])) ?></td>
                                 </tr>
-                            </thead>
-                            <tbody>
-                    <?php endif; ?>
+                            <?php endforeach; ?>
 
-                        <tr class="historico-linha">
-                            <td class="historico-oculto"><?= $dados['rg'] ?></td>
-                            <td><?= $dados['nome'] ?></td>
-                            <td><?= $dados['destino'] ?></td>
-                            <td><?= $dados['responsavel'] ?></td>
-                            <td><?= date('H:i', strtotime($dados['hora_entrada'])) ?></td>
-                            <td><?= $dados['hora_saida'] ? date('H:i', strtotime($dados['hora_saida'])) : '-' ?></td>
-                            <td class="historico-oculto"><?= date('d/m/Y', strtotime($dados['data_dia'])) ?></td>
-                        </tr>
-                    <?php endforeach; ?>
-
-                    <?php if ($dataAtual !== null): ?>
-                        </tbody>
-                        </table>
-                    <?php endif; ?>
+                            <?php if ($dataAtual !== null): ?>
+                                </tbody>
+                            </table>
+                        <?php endif; ?>
             </div>
         </div>
     </div>

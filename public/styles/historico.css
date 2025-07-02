@@ -22,7 +22,7 @@ body {
   border-radius: 10px;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
   padding: 20px;
- animation: fadeIn 0.4s ease-in-out;
+  animation: fadeIn 0.4s ease-in-out;
 }
 
 @keyframes fadeIn {
@@ -140,6 +140,4 @@ body {
   width: 34px;
   position: relative;
   top: -3px;
-
-
 }

@@ -4,7 +4,7 @@ $hostname = 'mysql-db';
 $port     = '3306';
 $database = 'visitantes';
 $username = 'root';
-$password = '123' ;
+$password = '123';
 
 try {
     $pdo = new PDO("mysql:host=$hostname;port=$port;dbname=$database", $username, $password);
@@ -13,4 +13,3 @@ try {
 } catch (PDOException $e) {
     echo "Erro na conexão: " . $e->getMessage();
 }
-

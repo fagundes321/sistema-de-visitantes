@@ -12,7 +12,6 @@ $paginaAtual = basename($_SERVER['PHP_SELF']);
         color: #007bff;
         text-decoration: underline;
         text-underline-offset: 2px;
-        /* ajuste a distância do sublinhado para o texto */
         text-decoration-color: #007bff;
     }
 </style>
@@ -35,15 +34,15 @@ $paginaAtual = basename($_SERVER['PHP_SELF']);
                     <li class="nav-item">
                         <a class="nav-link <?= ($paginaAtual == 'home.php') ? 'active' : '' ?>" href="/pages/home.php">Início</a>
                     </li>
+
                     <li class="nav-item">
                         <a class="nav-link <?= ($paginaAtual == 'visitantes.php' || $paginaAtual == 'registrarVisitantes.php') ? 'active' : '' ?>" href="/pages/visitantes.php">Visitantes</a>
                     </li>
-                    <!-- <li class="nav-item">
-            <a class="nav-link <?= ($paginaAtual == 'registrarVisitantes.php') ? 'active' : '' ?>" href="/pages/registrarVisitantes.php">Cadastro</a>
-        </li> -->
+
                     <li class="nav-item">
                         <a class="nav-link <?= ($paginaAtual == 'gerarRelatorio.php') ? 'active' : '' ?>" href="/pages/gerarRelatorio.php">Relatório</a>
                     </li>
+                    
                     <li class="nav-item">
                         <a class="nav-link <?= ($paginaAtual == 'historico.php') ? 'active' : '' ?>" href="/pages/historico.php">Histórico</a>
                     </li>
