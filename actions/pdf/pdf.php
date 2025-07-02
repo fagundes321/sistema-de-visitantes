@@ -1,4 +1,4 @@
-<?php 
+<?php
 require_once __DIR__ . '/../../vendor/autoload.php';
 require_once __DIR__ . '/../../routes/rotas.php';
 require_once __DIR__ . '/gerarPdf.php';
@@ -17,9 +17,9 @@ if ($dataFiltro) {
 
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
-    <!-- <title>Relatório de Visitantes</title> -->
     <style>
         body {
             font-family: DejaVu Sans, sans-serif;
@@ -44,7 +44,8 @@ if ($dataFiltro) {
             margin-bottom: 10px;
         }
 
-        th, td {
+        th,
+        td {
             border: 1px solid #444;
             padding: 6px 8px;
             text-align: left;
@@ -61,20 +62,21 @@ if ($dataFiltro) {
         }
     </style>
 </head>
+
 <body>
     <h1>Relatório de Visitantes</h1>
-    
+
     <div class="info-geral">
         Gerado em: <?= date('d/m/Y H:i') ?>
     </div>
-    
-    <?php if (!empty($visitantes)): ?>
-    <div class="data-grupo">
-        Data: <?= date('d/m/Y', strtotime($visitantes[0]['data_dia'])) ?>
-    </div>
-<?php endif; ?>
 
-    
+    <?php if (!empty($visitantes)): ?>
+        <div class="data-grupo">
+            Data: <?= date('d/m/Y', strtotime($visitantes[0]['data_dia'])) ?>
+        </div>
+    <?php endif; ?>
+
+
     <table>
         <thead>
             <tr>
@@ -87,18 +89,19 @@ if ($dataFiltro) {
             </tr>
         </thead>
         <tbody>
-            <?php foreach ($visitantes as $dados):?>
-            <tr>
-                <td><?= $dados['rg'] ?></td>
-                <td><?= $dados['nome'] ?></td>
-                <td><?= $dados['destino'] ?></td>
-                <td><?= $dados['responsavel'] ?></td>
-                <td><?= $dados['hora_entrada'] ?></td>
-                <td><?= $dados['hora_saida'] ?></td>
-            </tr>
+            <?php foreach ($visitantes as $dados): ?>
+                <tr>
+                    <td><?= $dados['rg'] ?></td>
+                    <td><?= $dados['nome'] ?></td>
+                    <td><?= $dados['destino'] ?></td>
+                    <td><?= $dados['responsavel'] ?></td>
+                    <td><?= $dados['hora_entrada'] ?></td>
+                    <td><?= $dados['hora_saida'] ?></td>
+                </tr>
             <?php endforeach; ?>
         </tbody>
     </table>
 
 </body>
+
 </html>

@@ -18,6 +18,18 @@ body.home {
   text-align: center;
   width: 90%;
   max-width: 600px;
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .painel-container h1 {
@@ -74,7 +86,6 @@ body.home {
 /* Botão Relatório */
 .botao-relatorio {
   background-color: #17a2b8;
- 
 }
 
 .botao-relatorio:hover {
@@ -85,7 +96,7 @@ body.home {
 /* Botão Histórico */
 .botao-historico {
   background-color: #333333;
-   padding: 12px 69px;
+  padding: 12px 64px;
 }
 
 .botao-historico:hover {
