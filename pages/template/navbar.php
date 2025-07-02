@@ -60,7 +60,7 @@ $paginaAtual = basename($_SERVER['PHP_SELF']);
                             <li>
                                 <hr class="dropdown-divider">
                             </li>
-                            <li><a class="dropdown-item" href="#">Alterar Senha</a></li>
+                            <!-- <li><a class="dropdown-item" href="#">Alterar Senha</a></li> -->
                             <li><a class="dropdown-item text-danger" href="logout.php">Sair</a></li>
                         </ul>
                     </li>
