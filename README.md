@@ -48,7 +48,7 @@ CREATE TABLE usuarios (
 
 ---
 
-## 🌐 Banco de Dados (Render)
+<!-- ## 🌐 Banco de Dados (Render)
 
 Estas são as informações genéricas de conexão que você precisa adaptar no arquivo `src/db.php`:
 
@@ -61,7 +61,7 @@ $db   = 'nome_do_banco';
 
 > 💡 Para segurança, você pode usar variáveis de ambiente ou arquivos `.env`.
 
----
+--- -->
 
 ## 🛠️ Rodando Localmente
 
@@ -69,24 +69,23 @@ $db   = 'nome_do_banco';
 
 1. Clone o repositório:
 ```bash
-git clone https://github.com/seuusuario/cadastro-usuarios.git
-cd cadastro-usuarios
+git https://github.com/fagundes321/sistema-de-visitantes.git
 ```
 
 2. Configure os dados de conexão no `src/db.php`.
 
 3. Suba um servidor local:
 ```bash
-php -S localhost:8000 -t public
+docker compose up -d --build
 ```
 
-4. Acesse: `http://localhost:8000`
+4. Acesse: `http://localhost:661`
 
 ---
 
 ## 💻 Funcionalidades
 
-- [x] Cadastro de usuários (nome e e-mail)
+- [x] Cadastro de usuários (RG, Visitante, Responsável, Horário de Entrada, Horário de Saída e Data)
 - [x] Armazenamento dos dados em banco MySQL
 - [x] Interface responsiva com Bootstrap
 - [ ] Listagem e edição de usuários *(em desenvolvimento)*
@@ -96,8 +95,8 @@ php -S localhost:8000 -t public
 ## 📎 Autor
 
 Feito por **Victor Fagundes**  
-🔗 GitHub: [@VictorFagundes](https://github.com/VictorFagundes)  
-📧 Email: seuemail@exemplo.com
+🔗 GitHub: [@fagundes321](https://github.com/fagundes321)  
+📧 Email: victorfagundes123@gmail.com
 
 ---
 
