@@ -80,7 +80,7 @@ if ($dataFiltro) {
     <table>
         <thead>
             <tr>
-                <th>RG</th>
+                <th>CPF</th>
                 <th>Nome</th>
                 <th>Destino</th>
                 <th>Responsável</th>
@@ -91,7 +91,7 @@ if ($dataFiltro) {
         <tbody>
             <?php foreach ($visitantes as $dados): ?>
                 <tr>
-                    <td><?= $dados['rg'] ?></td>
+                    <td><?= $dados['cpf'] ?></td>
                     <td><?= $dados['nome'] ?></td>
                     <td><?= $dados['destino'] ?></td>
                     <td><?= $dados['responsavel'] ?></td>

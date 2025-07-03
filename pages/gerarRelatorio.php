@@ -69,7 +69,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
                             <table class="historico-tabela">
                                 <thead>
                                     <tr>
-                                        <th class="historico-oculto">RG</th>
+                                        <th class="historico-oculto">CPF</th>
                                         <th>Visitante</th>
                                         <th>Destino</th>
                                         <th>Responsável</th>
@@ -82,7 +82,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
                                 <?php endif; ?>
 
                                 <tr class="historico-linha">
-                                    <td class="historico-oculto"><?= $dados['rg'] ?></td>
+                                    <td class="historico-oculto"><?= $dados['cpf'] ?></td>
                                     <td><?= $dados['nome'] ?></td>
                                     <td><?= $dados['destino'] ?></td>
                                     <td><?= $dados['responsavel'] ?></td>
@@ -106,4 +106,5 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
             </div>
         </div>
     </div>
+    <?php // require_once __DIR__ . ('/template/footer.php'); ?>
 </body>

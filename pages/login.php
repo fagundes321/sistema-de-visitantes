@@ -110,6 +110,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <!-- Botão -->
             <div class="d-grid">
                 <button type="submit" class="btn btn-primary">Entrar</button>
+                <p class="mt-5 mb-3 text-body-secondary d-flex justify-content-center">
+                    &copy; 2025 Todos os direitos reservados.
+                </p>
             </div>
         </form>
     </div>

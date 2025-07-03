@@ -2,20 +2,20 @@
 require_once __DIR__ . '/../routes/rotas.php';
 
 // Inicializa variáveis de erro
-$erroRG = '';
+$erroCpf = '';
 $erroNome = '';
 $erroDestino = '';
 $erroResponsavel = '';
 
 // Inicializa os valores do formulário
-$rg = $_POST['rg'] ?? '';
+$cpf = $_POST['cpf'] ?? '';
 $nome = $_POST['nome'] ?? '';
 $destino = $_POST['destino'] ?? '';
 $responsavel = $_POST['responsavel'] ?? '';
 
 function inserirdado($pdo)
 {
-    $rg = filter_input(INPUT_POST, 'rg');
+    $cpf = filter_input(INPUT_POST, 'cpf');
     $nome = filter_input(INPUT_POST, 'nome');
     $destino = filter_input(INPUT_POST, 'destino');
     $responsavel = filter_input(INPUT_POST, 'responsavel');
@@ -25,10 +25,10 @@ function inserirdado($pdo)
     $data_dia = date('Y-m-d');
 
     $sql = $pdo->prepare("INSERT INTO visitantes.dados_visitantes 
-        (rg, nome, destino, responsavel, hora_entrada, data_dia) 
-        VALUES (:rg, :nome, :destino, :responsavel, :hora_entrada, :data_dia)");
+        (cpf, nome, destino, responsavel, hora_entrada, data_dia) 
+        VALUES (:cpf, :nome, :destino, :responsavel, :hora_entrada, :data_dia)");
 
-    $sql->bindValue(':rg', $rg);
+    $sql->bindValue(':cpf', $cpf);
     $sql->bindValue(':nome', $nome);
     $sql->bindValue(':destino', $destino);
     $sql->bindValue(':responsavel', $responsavel);
@@ -37,46 +37,47 @@ function inserirdado($pdo)
     $sql->execute();
 }
 
-function formatCnpjCpf($rg)
-{
-  $CPF_LENGTH = 11;
-  $cnpj_cpf = preg_replace("/\D/", '', $rg);
-  
-  if (strlen($cnpj_cpf) === $CPF_LENGTH) {
-    return preg_replace("/(\d{3})(\d{3})(\d{3})(\d{2})/", "\$1.\$2.\$3-\$4", $cnpj_cpf);
-  } 
-  
-  return preg_replace("/(\d{2})(\d{3})(\d{3})(\d{4})(\d{2})/", "\$1.\$2.\$3/\$4-\$5", $cnpj_cpf);
-}
 
 // Lógica de envio do formulário
+// No início do POST, já limpa e formata o CPF
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    // Validação
-    if (empty($rg)) {
-        $erroRG = 'Informe o RG';
-    } elseif (!ctype_digit($rg)) {
-        $erroRG = 'Informe um valor numérico';
-    } elseif (strlen(trim($rg)) < 10) {
-        $erroRG = 'O RG deve ter pelo menos 10 dígitos';
-    } elseif (strlen(trim($rg)) > 10) {
-        $erroRG = 'O RG deve ter  10 dígitos';
+    // Remove tudo que não for número do cpf
+    // $cpf = preg_replace('/\D/', '', $cpf);
+    // Formata o CPF com pontos e traço
+    // $cpfFormatado = formatCpf($cpf);
+    
+    if (empty($cpf)) {
+        $erroCpf = 'Informe o CPF';
+    } elseif (!ctype_digit($cpf)) {
+        $erroCpf = 'Informe um valor numérico';
+    } elseif (strlen($cpf) !== 11) {  // CPF tem 11 dígitos
+        $erroCpf = 'O CPF deve ter 11 dígitos';
     } else {
-        $erroRG = '';
+        $erroCpf = '';
     }
+    
+    $cpfFormatado1 = substr($cpf, 0, 3);
+    $cpfFormatado2 = substr($cpf, 3, 3);
+    $cpfFormatado3 = substr($cpf, 6, 3);
+    $cpfFormatado4 = substr($cpf, 9, 2);
+    $cpfFinal = $cpfFormatado1 . "." . $cpfFormatado2 . "." . $cpfFormatado3 . "-" . $cpfFormatado4;
+  
 
-
-
+    // O resto da validação continua igual
     if (empty($nome)) $erroNome = 'Informe o nome';
     if (empty($destino)) $erroDestino = 'Informe o destino';
     if (empty($responsavel)) $erroResponsavel = 'Informe o responsável';
 
-    // Se não houver erros, insere no banco e redireciona
-    if (!$erroRG && !$erroNome && !$erroDestino && !$erroResponsavel) {
+    if (!$erroCpf && !$erroNome && !$erroDestino && !$erroResponsavel) {
+        // Na hora de inserir, passe o CPF formatado, se preferir assim
+        // Ou passe o número limpo $cpf sem formatação — depende do seu banco e uso
+        // Aqui vou passar o formatado para salvar com máscara
+        
         inserirdado($pdo);
-        header('Location: /pages/visitantes.php'); // redireciona só se estiver tudo certo
-        exit; // é importante o exit aqui
+   
+        header('Location: /pages/visitantes.php');
+        exit;
     }
-
-
-    // Se houver erro, não redireciona — o formulário exibirá os erros
+   
 }
+

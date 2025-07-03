@@ -27,7 +27,7 @@ $hoje = date('d/m/Y');
                 <table class="tabela-visitantes">
                     <thead>
                         <tr>
-                            <th class="col-hide">RG</th>
+                            <th class="col-hide">Cpf</th>
                             <th>Visitante</th>
                             <th>Destino</th>
                             <th>Responsável</th>
@@ -41,7 +41,7 @@ $hoje = date('d/m/Y');
                         <?php foreach ($visitantes as $dados): ?>
                             <?php if (date('d/m/Y', strtotime($dados['data_dia'])) == $hoje): ?>
                                 <tr class="lista_dados">
-                                    <td class="col-hide"><?= $dados['rg'] ?></td>
+                                    <td class="col-hide"><?= $dados['cpf'] ?></td>
                                     <td><?= $dados['nome'] ?></td>
                                     <td><?= $dados['destino'] ?></td>
                                     <td><?= $dados['responsavel'] ?></td>
@@ -71,7 +71,7 @@ $hoje = date('d/m/Y');
         </div>
     </div>
 
-    <?php require_once __DIR__ . '/template/footer.php'; ?>
+    <?php // require_once __DIR__ . '/template/footer.php'; ?>
 </body>
 
 </html>

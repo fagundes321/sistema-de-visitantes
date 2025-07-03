@@ -1,7 +1,7 @@
 <?php
 ob_start(); 
 require_once __DIR__ . '/../routes/rotas.php';
-require_once __DIR__ . '/template/navbar.php';
+// require_once __DIR__ . '/template/navbar.php';
 require_once __DIR__ . '/../actions/create.php'; // usar require_once aqui para garantir que só inclua uma vez
 
 // Os valores e mensagens já virão do create.php após POST
@@ -41,9 +41,9 @@ require_once __DIR__ . '/../actions/create.php'; // usar require_once aqui para 
         <form action="" method="POST">
             <div class="row g-3 mb-3">
                 <div class="col-md-4">
-                    <label for="rg" class="form-label">RG</label>
-                    <input type="text" class="form-control form-control-sm <?= !empty($erroRG) ? 'is-invalid' : '' ?>" id="rg" name="rg" value="<?= htmlspecialchars($rg) ?>">
-                    <?php if ($erroRG): ?><div class="invalid-feedback"><?= $erroRG ?></div><?php endif; ?>
+                    <label for="cpf" class="form-label">CPF</label>
+                    <input type="text" class="form-control form-control-sm <?= !empty($erroCpf) ? 'is-invalid' : '' ?>" id="cpf" name="cpf" value="<?= htmlspecialchars($cpf) ?>">
+                    <?php if ($erroCpf): ?><div class="invalid-feedback"><?= $erroCpf ?></div><?php endif; ?>
                 </div>
                 <div class="col-md-8">
                     <label for="nome" class="form-label">Nome Completo</label>
@@ -69,5 +69,6 @@ require_once __DIR__ . '/../actions/create.php'; // usar require_once aqui para 
             </div>
         </form>
     </div>
+    <?php // require_once __DIR__ . ('/template/footer.php'); ?>
 </body>
 </html>
