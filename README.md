@@ -23,14 +23,60 @@
 ## 📁 Estrutura do Projeto
 
 ```
-📁 actions/
-├── 📁 pdf/                   
-│   ├── 🐘 gerarPdf.php         # Responsável por gerar o PDF
-│   └── 🐘 pdf.php              # Contém o layout/HTML do PDF
-├── 🐘 create.php              # Página com o formulário de cadastro
-├── 🐘 delete.php              # Exclusão de registros
-├── 🐘 read.php                # Visualização de registros
-└── 🐘 update.php              # Atualização de registros
+📁 Sistema de Visitantes
+├── 📁 actions/
+│   ├── 📁 pdf/                   
+│   │   ├── 🐘 gerarPdf.php         # Responsável por gerar o PDF
+│   │   └── 🐘 pdf.php              # Contém o layout/HTML do PDF
+│   ├── 🐘 create.php              # Página com o formulário de cadastro
+│   ├── 🐘 delete.php              # Exclusão de registros
+│   ├── 🐘 read.php                # Visualização de registros
+│   └── 🐘 update.php              # Atualização de registros
+├── 📁 config/
+│   ├── 📁 database/
+│   │   └── 🐘 conn.php
+│   └── 📁 protect/
+│       ├── 📁 styles/
+│       │   └── 🎨 erro.css
+│       ├── 🐘 mensagemDeErro.php   
+│       └── 🐘 protectLogin.php
+├── 📁 pages/
+│   ├── 📁 template/
+│   │   ├── 🐘 footer.php
+│   │   ├── 🐘 header.php
+│   │   └── 🐘 navbar.php  
+│   ├── 🐘 gerarRelatorio.php
+│   ├── 🐘 historico.php
+│   ├── 🐘 home.php  
+│   ├── 🐘 login.php
+│   ├── 🐘 logout.php
+│   ├── 🐘 registrarVisitantes.php  
+│   └── 🐘 visitantes.php 
+├── 📁 public/
+│   ├── 📁 image/
+│   │   ├── 🖼️ gerarRelatorio.svg
+│   │   ├── 🖼️ gerarRelatorioBlack.svg
+│   │   ├── 🖼️ historico.svg
+│   │   ├── 🖼️ historicoTitulo.svg
+│   │   ├── 🖼️ icon.svg
+│   │   ├── 🖼️ iconNavBar.svg
+│   │   ├── 🖼️ registrarVisitantes.svg
+│   │   └── 🖼️ sairDoSistema.svg
+│   └── 📁 styles/
+│       ├── 🎨 gerarRelatorio.css
+│       ├── 🎨 historico.css
+│       ├── 🎨 home.css
+│       ├── 🎨 index.css
+│       ├── 🎨 login.css
+│       └── 🎨 visitantes.css     
+├── 📁 routes/
+│   └── 🐘 rotas.php   
+├── ⚙️ composer.json/
+├── 📁 composer.lock/
+├── 🐳 docker-compose.yml/
+├── 📁 index.php/
+├── 📁 launch.json/
+└── 📁 README.md/
 
 
 
