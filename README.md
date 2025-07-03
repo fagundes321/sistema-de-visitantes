@@ -1,6 +1,6 @@
 # 📋 Sistema de Cadastro de Usuários
 
- Este é um sistema simples de **cadastro de usuários em PHP**, com conexão a um banco de dados **MySQL** <!-- hospedado na **Render** -->.O sistema permite cadastrar as seguintes informações dos visitantes:  **CPF, nome, destino, responsável, hora da entrada, hora da saída e data visita**, salvando os dados diretamente no banco de dados.
+ Este é um sistema simples de **cadastro de usuários em PHP**, com conexão a um banco de dados **MySQL** <!-- hospedado na **Render** -->.O sistema permite cadastrar as seguintes informações dos visitantes:  **CPF, nome, destino, responsável, hora da entrada, hora da saída e data da visita**, salvando os dados diretamente no banco de dados.
 
 Além do cadastro, o sistema oferece as seguintes funcionalidades:
 
@@ -19,7 +19,7 @@ Além do cadastro, o sistema oferece as seguintes funcionalidades:
 ## ⚙️ Tecnologias Utilizadas
 
 - PHP 8.x
-- MySQL (Render)
+- MySQL (phpMyAdmin)
 - HTML5 / CSS3
 - Bootstrap 5
 - Font Awesome
@@ -37,17 +37,17 @@ Abaixo está a estrutura de diretórios do sistema de visitantes desenvolvido em
 │   ├── 📁 pdf/                   
 │   │   ├── 🐘 gerarPdf.php               # Responsável por gerar o PDF
 │   │   └── 🐘 pdf.php                    # Contém o layout/HTML do PDF
-│   ├── 🐘 create.php                     # Ação de 
-│   ├── 🐘 delete.php                     # Exclusão de registros
-│   ├── 🐘 read.php                       # Visualização de registros
-│   └── 🐘 update.php                     # Atualização de registros
+│   ├── 🐘 create.php                     # Adiciona as informações dos visitantes no banco de dados 
+│   ├── 🐘 delete.php                     # Remove registros do banco de dados  
+│   ├── 🐘 read.php                       # Lista os registros existentes na tabela (exibição na aplicação)
+│   └── 🐘 update.php                     # Atualiza os dados de um registro existente
 ├── 📁 config/
 │   ├── 📁 database/
 │   │   └── 🐘 conn.php                   # Conexão com o banco de dados
 │   └── 📁 protect/
 │       ├── 📁 styles/
 │       │   └── 🎨 erro.css               # Estilos do arquivo mensagemDeErro.php
-│       ├── 🐘 mensagemDeErro.php         # Pagina da mensagem de erro
+│       ├── 🐘 mensagemDeErro.php         # Página da mensagem de erro
 │       ├── 🐘 protectLogin.php           # Protege rotas com autenticação
 │       └── 🐘 logout.php                 # Página responsável por encerrar a sessão do usuário
 ├── 📁 pages/
@@ -55,12 +55,12 @@ Abaixo está a estrutura de diretórios do sistema de visitantes desenvolvido em
 │   │   ├── 🐘 footer.php                 # Rodapé das páginas
 │   │   ├── 🐘 head.php                   # Elementos da <head> da página (metatags, título, CSS)
 │   │   └── 🐘 navbar.php                 # Barra de navegação superior
-│   ├── 🐘 gerarRelatorio.php             # Pagina de gerar Relatorio
-│   ├── 🐘 historico.php                  # Pagina do historico
-│   ├── 🐘 home.php                       # Pagina de inicio
-│   ├── 🐘 login.php                      # Pagina de login
+│   ├── 🐘 gerarRelatorio.php             # Página de gerar Relatório
+│   ├── 🐘 historico.php                  # Página do historico
+│   ├── 🐘 home.php                       # Página de inicio
+│   ├── 🐘 login.php                      # Página de login
 │   ├── 🐘 registrarVisitantes.php        # Formulario de registrar visitantes
-│   └── 🐘 visitantes.php                 # Pagina de controle de visitantes
+│   └── 🐘 visitantes.php                 # Página de controle de visitantes
 ├── 📁 public/
 │   ├── 📁 image/
 │   │   ├── 🖼️ gerarRelatorio.svg         # icon botão Gerar Relatório /pages/home.php
@@ -72,12 +72,12 @@ Abaixo está a estrutura de diretórios do sistema de visitantes desenvolvido em
 │   │   ├── 🖼️ registrarVisitantes.svg    # icon botão Acessar visitantes /pages/home.php
 │   │   └── 🖼️ sairDoSistema.svg          # icon botão Sair do Sistema /pages/home.php
 │   └── 📁 styles/
-│       ├── 🎨 gerarRelatorio.css         # styles da pagina /pages/gerarRelatorio.php
-│       ├── 🎨 historico.css              # styles da pagina /pages/historico.php
-│       ├── 🎨 home.css                   # styles da pagina /pages/home.php
-│       ├── 🎨 index.css                  # styles da pagina index.php
-│       ├── 🎨 login.css                  # styles da pagina /pages/login
-│       └── 🎨 visitantes.css             # styles da pagina /pages/visitantes
+│       ├── 🎨 gerarRelatorio.css         # styles da página /pages/gerarRelatorio.php
+│       ├── 🎨 historico.css              # styles da página /pages/historico.php
+│       ├── 🎨 home.css                   # styles da página /pages/home.php
+│       ├── 🎨 index.css                  # styles da página index.php
+│       ├── 🎨 login.css                  # styles da página /pages/login
+│       └── 🎨 visitantes.css             # styles da página /pages/visitantes
 ├── 📁 routes/
 │   └── 🐘 rotas.php                      # Arquivo de definição de rotas do sistema
 ├── 📁 vendor/                            # Dependências gerenciadas pelo Composer (não editar manualmente)
@@ -111,14 +111,14 @@ CREATE TABLE visitantes.dados_visitantes (
 );
 ```
 
-Tabela visitantes.dados_visitantes
+Tabela visitantes.usuarios
 
 ```sql
 CREATE TABLE visitantes.usuarios (
   id      INT AUTO_INCREMENT PRIMARY KEY,
   nome    VARCHAR(140) NOT NULL,
   usuario VARCHAR(140) NOT NULL,
-  senha   VARCHAR(140) NOT NULL,
+  senha   VARCHAR(140) NOT NULL
 );
 ```
 
