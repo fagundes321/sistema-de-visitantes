@@ -215,3 +215,19 @@ Feito por **Victor Fagundes**
 ## ✅ Licença
 
 Distribuído sob a licença MIT. Veja `LICENSE` para mais informações.
+
+---
+
+![GitHub repo size](https://img.shields.io/github/repo-size/fagundes321/sistema-de-visitantes)
+![GitHub stars](https://img.shields.io/github/stars/fagundes321/sistema-de-visitantes?style=social)
+
+## 📚 Sumário
+
+- [Sobre o Projeto](#-sistema-de-cadastro-de-usuários)
+- [Tecnologias Utilizadas](#-tecnologias-utilizadas)
+- [Estrutura do Projeto](#-estrutura-do-projeto)
+- [Script SQL](#-script-sql--criação-das-tabela)
+- [Rodando Localmente](#-rodando-localmente)
+- [Funcionalidades](#-funcionalidades)
+- [Autor](#-autor)
+- [Licença](#-licença)
