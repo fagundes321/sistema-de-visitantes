@@ -1,12 +1,12 @@
 # 📋 Sistema de Cadastro de Usuários
 
-Este é um sistema simples de **cadastro de usuários em PHP** com conexão a um banco de dados **MySQL** hospedado na **Render**. O sistema permite cadastrar usuários com nome e e-mail, e salvar os dados diretamente no banco.
+ Este é um sistema simples de **cadastro de usuários em PHP**, com conexão a um banco de dados **MySQL** <!-- hospedado na **Render** -->.O sistema permite cadastrar as seguintes informações dos visitantes:  **CPF, nome, destino, responsável, hora da entrada, hora da saída e data visita**, salvando os dados diretamente no banco de dados.
 
 ---
 
-## 🔗 Projeto Online
+<!-- ## 🔗 Projeto Online
 
-➡️ Acesse aqui: [https://cadastro-de-usuarios-1us6.onrender.com](https://cadastro-de-usuarios-1us6.onrender.com)
+➡️ Acesse aqui: [https://cadastro-de-usuarios-1us6.onrender.com](https://cadastro-de-usuarios-1us6.onrender.com) -->
 
 ---
 
@@ -23,8 +23,17 @@ Este é um sistema simples de **cadastro de usuários em PHP** com conexão a um
 ## 📁 Estrutura do Projeto
 
 ```
-📁 public/
- └── index.php           # Página principal com formulário de cadastro
+📁 actions/
+├── 📁 pdf/                   
+│   ├── 🐘 gerarPdf.php         # Responsável por gerar o PDF
+│   └── 🐘 pdf.php              # Contém o layout/HTML do PDF
+├── 🐘 create.php              # Página com o formulário de cadastro
+├── 🐘 delete.php              # Exclusão de registros
+├── 🐘 read.php                # Visualização de registros
+└── 🐘 update.php              # Atualização de registros
+
+
+
 📁 src/
  ├── db.php              # Arquivo de conexão com o banco de dados
  └── processa.php        # Processamento e inserção dos dados
