@@ -160,7 +160,9 @@ docker compose up -d --build
 
 ## 💻 Funcionalidades
 
-- [x] Cadastro de usuários (RG, Visitante, Responsável, Horário de Entrada, Horário de Saída e Data)
+- [x] Cadastro de visitantes (CPF, Visitante, Responsável, Horário de Entrada, Horário de Saída e Data)
+- [x] Criação de relatórios em PDF por data
+- [x] Visualização do histórico de visitas
 - [x] Armazenamento dos dados em banco MySQL
 - [x] Interface responsiva com Bootstrap
 - [ ] Listagem e edição de usuários *(em desenvolvimento)*
@@ -170,8 +172,11 @@ docker compose up -d --build
 ## 📎 Autor
 
 Feito por **Victor Fagundes**  
-🔗 GitHub: [@fagundes321](https://github.com/fagundes321)  
-📧 Email: victorfagundes123@gmail.com
+🔗 GitHub:    @fagundes321
+💼 LinkedIn:  linkedin.com/in/victorfagundes
+🌐 Portfólio: https://victor-fagundes.vercel.app/
+📧 Email:     victorfagundes123@gmail.com
+
 
 ---
 
