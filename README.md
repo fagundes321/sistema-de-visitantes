@@ -8,7 +8,7 @@ Além do cadastro, o sistema oferece as seguintes funcionalidades:
 
   📄 **Geração de relatórios** dos visitantes de um dia específico.
 
----
+<!-- --- -->
 
 <!-- ## 🔗 Projeto Online
 
@@ -23,6 +23,7 @@ Além do cadastro, o sistema oferece as seguintes funcionalidades:
 - HTML5 / CSS3
 - Bootstrap 5
 - Font Awesome
+- DomPDF – Biblioteca PHP para geração de arquivos PDF
 
 ---
 
@@ -140,21 +141,50 @@ $db   = 'nome_do_banco';
 
 ## 🛠️ Rodando Localmente
 
-> Para testar em seu ambiente local com PHP e MySQL:
+> Para testar o sistema em seu ambiente local com PHP, MySQL e Docker:
 
-1. Clone o repositório:
+1. **Clone o repositório:**
 ```bash
-git https://github.com/fagundes321/sistema-de-visitantes.git
+git clone https://github.com/fagundes321/sistema-de-visitantes.git
+cd sistema-de-visitantes
 ```
 
-2. Configure os dados de conexão no `src/db.php`.
+2. **Configure os dados de conexão** no arquivo:
+```php
+config/database/db.php
+```
 
-3. Suba um servidor local:
+
+3. Suba os containers com Docker:
 ```bash
 docker compose up -d --build
 ```
 
-4. Acesse: `http://localhost:661`
+4. Acesse o terminal do container PHP:
+```bash
+docker exec -it visitantes bash
+```
+
+5. Atualize as dependências do Composer:
+```bash
+composer update
+```
+
+6. Instale a biblioteca Dompdf:
+```bash
+composer require dompdf/dompdf
+```
+7. Saia do terminal do container:
+```bash
+exit
+```
+
+8. Reinicie os containers (se necessário):
+```bash
+docker compose up -d --build
+```
+
+9. Acesse: `http://localhost:661`
 
 ---
 
