@@ -2,6 +2,12 @@
 
  Este é um sistema simples de **cadastro de usuários em PHP**, com conexão a um banco de dados **MySQL** <!-- hospedado na **Render** -->.O sistema permite cadastrar as seguintes informações dos visitantes:  **CPF, nome, destino, responsável, hora da entrada, hora da saída e data visita**, salvando os dados diretamente no banco de dados.
 
+Além do cadastro, o sistema oferece as seguintes funcionalidades:
+
+  ✅ **Visualização do histórico de visitas** realizadas.
+
+  📄 **Geração de relatórios** dos visitantes de um dia específico.
+
 ---
 
 <!-- ## 🔗 Projeto Online
@@ -21,6 +27,8 @@
 ---
 
 ## 📁 Estrutura do Projeto
+
+Abaixo está a estrutura de diretórios do sistema de visitantes desenvolvido em PHP, com organização modular, uso de Docker e controle de dependências via Composer:
 
 ```
 📁 Sistema de Visitantes
@@ -58,7 +66,7 @@
 │   │   ├── 🖼️ gerarRelatorioBlack.svg    # icon Titulo Gerar Relatório /pages/gerarRelatorio.php
 │   │   ├── 🖼️ historico.svg              # icon botão historico /pages/home.php
 │   │   ├── 🖼️ historicoTitulo.svg        # icon Titulo historico /pages/historico.php  
-│   │   ├── 🖼️ icon.svg                   # icon da barrao do navegador
+│   │   ├── 🖼️ icon.svg                   # icon da barra do navegador
 │   │   ├── 🖼️ iconNavBar.svg             # icon da barra de navegação superior /pages/template/navbar
 │   │   ├── 🖼️ registrarVisitantes.svg    # icon botão Acessar visitantes /pages/home.php
 │   │   └── 🖼️ sairDoSistema.svg          # icon botão Sair do Sistema /pages/home.php
@@ -71,6 +79,7 @@
 │       └── 🎨 visitantes.css             # styles da pagina /pages/visitantes
 ├── 📁 routes/
 │   └── 🐘 rotas.php                      # Arquivo de definição de rotas do sistema
+├── 📁 vendor/                            # Dependências gerenciadas pelo Composer (não editar manualmente)
 ├── ⚙️ composer.json                      # Gerenciador de dependências do PHP (Composer)
 ├── 🔒 composer.lock                      # Lockfile gerado pelo Composer
 ├── 📦 docker-compose.yml                 # Configuração de containers com Docker Compose
@@ -83,14 +92,32 @@
 
 ---
 
-## 🗃️ Script SQL – Criação da Tabela
+## 🗃️ Script SQL – Criação das Tabela
+
+Tabela visitantes.dados_visitantes
 
 ```sql
-CREATE TABLE usuarios (
-  id INT AUTO_INCREMENT PRIMARY KEY,
-  nome VARCHAR(100) NOT NULL,
-  email VARCHAR(100) NOT NULL,
-  data_cadastro TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+CREATE TABLE visitantes.dados_visitantes (
+  id            INT           AUTO_INCREMENT PRIMARY KEY,
+  cpf           VARCHAR(20),
+  nome          VARCHAR(120) NOT NULL,
+  destino       VARCHAR(120) NOT NULL,
+  responsavel   VARCHAR(120) NOT NULL,
+  hora_entrada  TIME         NOT NULL,
+  hora_saida    TIME         NOT NULL,
+  data_dia      DATE         NOT NULL,
+  saida         TINYINT(1)   NOT NULL
+);
+```
+
+Tabela visitantes.dados_visitantes
+
+```sql
+CREATE TABLE visitantes.usuarios (
+  id      INT AUTO_INCREMENT PRIMARY KEY,
+  nome    VARCHAR(140) NOT NULL,
+  usuario VARCHAR(140) NOT NULL,
+  senha   VARCHAR(140) NOT NULL,
 );
 ```
 
