@@ -226,13 +226,16 @@ Distribuído sob a licença MIT. Veja `LICENSE` para mais informações.
 ![Tela de login](./public/image/screenshots/login.png)
 
 - Erro ao tentar logar sem preencher o **usuário**  
+
 ![Erro: usuário vazio](./public/image/screenshots/login-erro-usuario.png)
 
 - Erro ao tentar logar sem preencher a **senha**  
+
 ![Erro: senha vazia](./public/image/screenshots/login-erro-senha.png)
 
 - Erro ao informar **dados incorretos**  
-![Erro: dados incorretos](./public/image/screenshots/login-erro-dados-incorretor.png)
+
+![Erro: dados incorretos](./public/image/screenshots/login-erro-dados-incorretos.png)
 
 ---
 
