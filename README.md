@@ -184,7 +184,10 @@ exit
 docker compose up -d --build
 ```
 
-9. Acesse: `http://localhost:661`
+9. Acesse: 
+```bash
+http://localhost:661
+```
 
 ---
 
