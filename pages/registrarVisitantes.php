@@ -1,7 +1,7 @@
 <?php
 ob_start(); 
 require_once __DIR__ . '/../routes/rotas.php';
-// require_once __DIR__ . '/template/navbar.php';
+require_once __DIR__ . '/template/navbar.php';
 require_once __DIR__ . '/../actions/create.php'; // usar require_once aqui para garantir que só inclua uma vez
 
 // Os valores e mensagens já virão do create.php após POST
