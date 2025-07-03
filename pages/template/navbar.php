@@ -1,6 +1,6 @@
 <?php
 require_once __DIR__ . ('/../../config/protect/protectLogin.php');
-require_once __DIR__ . ('/header.php');
+require_once __DIR__ . ('/head.php');
 // ele pega a pagina atual e armazena na variavel
 $paginaAtual = basename($_SERVER['PHP_SELF']);
 
@@ -61,7 +61,7 @@ $paginaAtual = basename($_SERVER['PHP_SELF']);
                                 <hr class="dropdown-divider">
                             </li>
                             <!-- <li><a class="dropdown-item" href="#">Alterar Senha</a></li> -->
-                            <li><a class="dropdown-item text-danger" href="logout.php">Sair</a></li>
+                            <li><a class="dropdown-item text-danger" href="/config/protect/logout.php">Sair</a></li>
                         </ul>
                     </li>
                 </ul>

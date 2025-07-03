@@ -26,67 +26,59 @@
 📁 Sistema de Visitantes
 ├── 📁 actions/
 │   ├── 📁 pdf/                   
-│   │   ├── 🐘 gerarPdf.php         # Responsável por gerar o PDF
-│   │   └── 🐘 pdf.php              # Contém o layout/HTML do PDF
-│   ├── 🐘 create.php              # Página com o formulário de cadastro
-│   ├── 🐘 delete.php              # Exclusão de registros
-│   ├── 🐘 read.php                # Visualização de registros
-│   └── 🐘 update.php              # Atualização de registros
+│   │   ├── 🐘 gerarPdf.php               # Responsável por gerar o PDF
+│   │   └── 🐘 pdf.php                    # Contém o layout/HTML do PDF
+│   ├── 🐘 create.php                     # Ação de 
+│   ├── 🐘 delete.php                     # Exclusão de registros
+│   ├── 🐘 read.php                       # Visualização de registros
+│   └── 🐘 update.php                     # Atualização de registros
 ├── 📁 config/
 │   ├── 📁 database/
-│   │   └── 🐘 conn.php
+│   │   └── 🐘 conn.php                   # Conexão com o banco de dados
 │   └── 📁 protect/
 │       ├── 📁 styles/
-│       │   └── 🎨 erro.css
-│       ├── 🐘 mensagemDeErro.php   
-│       └── 🐘 protectLogin.php
+│       │   └── 🎨 erro.css               # Estilos do arquivo mensagemDeErro.php
+│       ├── 🐘 mensagemDeErro.php         # Pagina da mensagem de erro
+│       ├── 🐘 protectLogin.php           # Protege rotas com autenticação
+│       └── 🐘 logout.php                 # Página responsável por encerrar a sessão do usuário
 ├── 📁 pages/
 │   ├── 📁 template/
-│   │   ├── 🐘 footer.php
-│   │   ├── 🐘 header.php
-│   │   └── 🐘 navbar.php  
-│   ├── 🐘 gerarRelatorio.php
-│   ├── 🐘 historico.php
-│   ├── 🐘 home.php  
-│   ├── 🐘 login.php
-│   ├── 🐘 logout.php
-│   ├── 🐘 registrarVisitantes.php  
-│   └── 🐘 visitantes.php 
+│   │   ├── 🐘 footer.php                 # Rodapé das páginas
+│   │   ├── 🐘 head.php                   # Elementos da <head> da página (metatags, título, CSS)
+│   │   └── 🐘 navbar.php                 # Barra de navegação superior
+│   ├── 🐘 gerarRelatorio.php             # Pagina de gerar Relatorio
+│   ├── 🐘 historico.php                  # Pagina do historico
+│   ├── 🐘 home.php                       # Pagina de inicio
+│   ├── 🐘 login.php                      # Pagina de login
+│   ├── 🐘 registrarVisitantes.php        # Formulario de registrar visitantes
+│   └── 🐘 visitantes.php                 # Pagina de controle de visitantes
 ├── 📁 public/
 │   ├── 📁 image/
-│   │   ├── 🖼️ gerarRelatorio.svg
-│   │   ├── 🖼️ gerarRelatorioBlack.svg
-│   │   ├── 🖼️ historico.svg
-│   │   ├── 🖼️ historicoTitulo.svg
-│   │   ├── 🖼️ icon.svg
-│   │   ├── 🖼️ iconNavBar.svg
-│   │   ├── 🖼️ registrarVisitantes.svg
-│   │   └── 🖼️ sairDoSistema.svg
+│   │   ├── 🖼️ gerarRelatorio.svg         # icon botão Gerar Relatório /pages/home.php
+│   │   ├── 🖼️ gerarRelatorioBlack.svg    # icon Titulo Gerar Relatório /pages/gerarRelatorio.php
+│   │   ├── 🖼️ historico.svg              # icon botão historico /pages/home.php
+│   │   ├── 🖼️ historicoTitulo.svg        # icon Titulo historico /pages/historico.php  
+│   │   ├── 🖼️ icon.svg                   # icon da barrao do navegador
+│   │   ├── 🖼️ iconNavBar.svg             # icon da barra de navegação superior /pages/template/navbar
+│   │   ├── 🖼️ registrarVisitantes.svg    # icon botão Acessar visitantes /pages/home.php
+│   │   └── 🖼️ sairDoSistema.svg          # icon botão Sair do Sistema /pages/home.php
 │   └── 📁 styles/
-│       ├── 🎨 gerarRelatorio.css
-│       ├── 🎨 historico.css
-│       ├── 🎨 home.css
-│       ├── 🎨 index.css
-│       ├── 🎨 login.css
-│       └── 🎨 visitantes.css     
+│       ├── 🎨 gerarRelatorio.css         # styles da pagina /pages/gerarRelatorio.php
+│       ├── 🎨 historico.css              # styles da pagina /pages/historico.php
+│       ├── 🎨 home.css                   # styles da pagina /pages/home.php
+│       ├── 🎨 index.css                  # styles da pagina index.php
+│       ├── 🎨 login.css                  # styles da pagina /pages/login
+│       └── 🎨 visitantes.css             # styles da pagina /pages/visitantes
 ├── 📁 routes/
-│   └── 🐘 rotas.php   
-├── ⚙️ composer.json/
-├── 🔒 composer.lock/
-├── 📦 docker-compose.yml/
-├── 🐳 Dockerfile
-├── 🐘 index.php/
-├── ⚙️ launch.json/
-└── 📘 README.md/
+│   └── 🐘 rotas.php                      # Arquivo de definição de rotas do sistema
+├── ⚙️ composer.json                      # Gerenciador de dependências do PHP (Composer)
+├── 🔒 composer.lock                      # Lockfile gerado pelo Composer
+├── 📦 docker-compose.yml                 # Configuração de containers com Docker Compose
+├── 🐳 Dockerfile                         # Instruções de build do container Docker
+├── 🐘 index.php                          # Ponto de entrada principal do sistema
+├── ⚙️ launch.json                        # Configurações de execução para debug (VS Code)
+└── 📘 README.md                          # Documentação inicial do projeto
 
-
-
-📁 src/
- ├── db.php              # Arquivo de conexão com o banco de dados
- └── processa.php        # Processamento e inserção dos dados
-📁 sql/
- └── criar_tabela.sql    # Script para criar a tabela no banco
-README.md
 ```
 
 ---
