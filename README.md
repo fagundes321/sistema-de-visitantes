@@ -172,11 +172,10 @@ docker compose up -d --build
 ## 📎 Autor
 
 Feito por **Victor Fagundes**  
-🔗 GitHub: [@fagundes321](https://github.com/fagundes321)  
-💼 LinkedIn: www.linkedin.com/in/victor-fagundes-dev
-🌐 Portfólio: https://victor-fagundes.vercel.app/
-
-📧 Email: victorfagundes123@gmail.com
+- 🔗 GitHub: [@fagundes321](https://github.com/fagundes321)  
+- 💼 LinkedIn: www.linkedin.com/in/victor-fagundes-dev
+- 🌐 Portfólio: https://victor-fagundes.vercel.app/
+- 📧 Email: victorfagundes123@gmail.com
 
 ---
 
