@@ -72,11 +72,12 @@
 ├── 📁 routes/
 │   └── 🐘 rotas.php   
 ├── ⚙️ composer.json/
-├── 📁 composer.lock/
-├── 🐳 docker-compose.yml/
-├── 📁 index.php/
-├── 📁 launch.json/
-└── 📁 README.md/
+├── 🔒 composer.lock/
+├── 📦 docker-compose.yml/
+├── 🐳 Dockerfile
+├── 🐘 index.php/
+├── ⚙️ launch.json/
+└── 📘 README.md/
 
 
 
