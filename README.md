@@ -220,11 +220,24 @@ Distribuído sob a licença MIT. Veja `LICENSE` para mais informações.
 
 ## 🖼️ Demonstração
 
-# Tela de Login
+### 🔐 Tela de Login
+
+- Formulário inicial  
 ![Tela de login](./public/image/screenshots/login.png)
-![Tela inicial](./public/image/screenshots/login.png)
-![Tela inicial](./public/image/screenshots/login.png)
-![Tela inicial](./public/image/screenshots/login.png)
-# Painel principal
+
+- Erro ao tentar logar sem preencher o **usuário**  
+![Erro: usuário vazio](./public/image/screenshots/login-erro-usuario.png)
+
+- Erro ao tentar logar sem preencher a **senha**  
+![Erro: senha vazia](./public/image/screenshots/login-erro-senha.png)
+
+- Erro ao informar **dados incorretos**  
+![Erro: dados incorretos](./public/image/screenshots/login-erro-dados-incorretor.png)
+
+---
+
+### 🏠 Painel Principal (Home)
+
 ![Tela inicial](./public/image/screenshots/home.png)
+
 
