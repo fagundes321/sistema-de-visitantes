@@ -222,25 +222,53 @@ Distribuído sob a licença MIT. Veja `LICENSE` para mais informações.
 
 ### 🔐 Tela de Login
 
-- Formulário inicial  
 ![Tela de login](./public/image/screenshots/login.png)
 
-- Erro ao tentar logar sem preencher o **usuário**  
+<!-- 
+#### Erros de validação
 
+- Usuário não preenchido  
 ![Erro: usuário vazio](./public/image/screenshots/login-erro-usuario.png)
 
-- Erro ao tentar logar sem preencher a **senha**  
-
+- Senha não preenchida  
 ![Erro: senha vazia](./public/image/screenshots/login-erro-senha.png)
 
-- Erro ao informar **dados incorretos**  
-
+- Dados incorretos  
 ![Erro: dados incorretos](./public/image/screenshots/login-erro-dados-incorretos.png)
+-->
 
 ---
 
 ### 🏠 Painel Principal (Home)
 
-![Tela inicial](./public/image/screenshots/home.png)
+![Painel principal](./public/image/screenshots/home.png)
 
+---
 
+### 👥 Painel de Visitantes
+
+![Painel de visitantes](./public/image/screenshots/visitantes.png)
+
+---
+
+### 📝 Formulário de Registro de Visitantes
+
+![Formulário de registro](./public/image/screenshots/registrarVisitantes.png)
+
+---
+
+### 📅 Gerar Relatório
+
+![Tela de gerar relatório](./public/image/screenshots/pesquisarRelatorio-pre.png)
+
+---
+
+### 📄 Relatório Gerado em PDF
+
+![PDF gerado](./public/image/screenshots/pdf-gerado.png)
+
+---
+
+### 📚 Histórico de Visitas
+
+![Histórico de visitas](./public/image/screenshots/historico.png)
