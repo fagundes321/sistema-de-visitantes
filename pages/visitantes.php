@@ -2,6 +2,7 @@
 // navbar
 require_once __DIR__ . '/template/navbar.php';
 require_once __DIR__ . '/../routes/rotas.php';
+require_once __DIR__ . '/../actions/formatCpf.php';
 
 $visitantes = [];
 
@@ -41,7 +42,7 @@ $hoje = date('d/m/Y');
                         <?php foreach ($visitantes as $dados): ?>
                             <?php if (date('d/m/Y', strtotime($dados['data_dia'])) == $hoje): ?>
                                 <tr class="lista_dados">
-                                    <td class="col-hide"><?= $dados['cpf'] ?></td>
+                                    <td class="col-hide"><?= formatCnpjCpf($dados['cpf']) ?></td>
                                     <td><?= $dados['nome'] ?></td>
                                     <td><?= $dados['destino'] ?></td>
                                     <td><?= $dados['responsavel'] ?></td>

@@ -91,7 +91,7 @@ if ($dataFiltro) {
         <tbody>
             <?php foreach ($visitantes as $dados): ?>
                 <tr>
-                    <td><?= $dados['cpf'] ?></td>
+                    <td><?= formatCnpjCpf($dados['cpf']) ?></td>
                     <td><?= $dados['nome'] ?></td>
                     <td><?= $dados['destino'] ?></td>
                     <td><?= $dados['responsavel'] ?></td>

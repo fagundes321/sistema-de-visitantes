@@ -13,6 +13,8 @@ $nome = $_POST['nome'] ?? '';
 $destino = $_POST['destino'] ?? '';
 $responsavel = $_POST['responsavel'] ?? '';
 
+
+
 function inserirdado($pdo)
 {
     $cpf = filter_input(INPUT_POST, 'cpf');
@@ -45,7 +47,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // $cpf = preg_replace('/\D/', '', $cpf);
     // Formata o CPF com pontos e traço
     // $cpfFormatado = formatCpf($cpf);
-    
+
     if (empty($cpf)) {
         $erroCpf = 'Informe o CPF';
     } elseif (!ctype_digit($cpf)) {
@@ -55,16 +57,27 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     } else {
         $erroCpf = '';
     }
-    
-    $cpfFormatado1 = substr($cpf, 0, 3);
-    $cpfFormatado2 = substr($cpf, 3, 3);
-    $cpfFormatado3 = substr($cpf, 6, 3);
-    $cpfFormatado4 = substr($cpf, 9, 2);
-    $cpfFinal = $cpfFormatado1 . "." . $cpfFormatado2 . "." . $cpfFormatado3 . "-" . $cpfFormatado4;
-  
+
+
+    if (empty($nome)) {
+        $erroNome = 'Informe o nome';
+    } elseif (!preg_match("/^[\p{L}\s]+$/u", $nome)) {
+        $erroNome = 'O nome deve conter apenas letras';
+    }
+
+    if (empty($destino)) {
+        $erroDestino = 'Informe o destino';
+    } elseif (!preg_match("/^[\p{L}\s]+$/u", $destino)) {
+        $erroDestino = 'O destino deve conter apenas letras';
+    }
+
+    if (empty($responsavel)) {
+        $erroResponsavel = 'Informe o responsável';
+    } elseif (!preg_match("/^[\p{L}\s]+$/u", $responsavel)) {
+        $erroResponsavel = 'O responsável deve conter apenas letras';
+    }
 
     // O resto da validação continua igual
-    if (empty($nome)) $erroNome = 'Informe o nome';
     if (empty($destino)) $erroDestino = 'Informe o destino';
     if (empty($responsavel)) $erroResponsavel = 'Informe o responsável';
 
@@ -72,12 +85,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         // Na hora de inserir, passe o CPF formatado, se preferir assim
         // Ou passe o número limpo $cpf sem formatação — depende do seu banco e uso
         // Aqui vou passar o formatado para salvar com máscara
-        
+
         inserirdado($pdo);
-   
+
         header('Location: /pages/visitantes.php');
         exit;
     }
-   
 }
-

@@ -1,12 +1,16 @@
 <?php 
 
-function formatCpf($cpf)
+function formatCnpjCpf($value)
 {
-    $cpf = preg_replace('/\D/', '', $cpf);
+    if (is_null($value)) return '';
 
-    if (strlen($cpf) === 11) {
-        return preg_replace("/(\d{3})(\d{3})(\d{3})(\d{2})/", "$1.$2.$3-$4", $cpf);
+    $CPF_LENGTH = 11;
+    $cnpj_cpf = preg_replace("/\D/", '', $value);
+
+    if (strlen($cnpj_cpf) === $CPF_LENGTH) {
+        return preg_replace("/(\d{3})(\d{3})(\d{3})(\d{2})/", "\$1.\$2.\$3-\$4", $cnpj_cpf);
     }
 
-    return $cpf; // se não for CPF, retorna sem formatação (ou ajuste conforme quiser)
+    return preg_replace("/(\d{2})(\d{3})(\d{3})(\d{4})(\d{2})/", "\$1.\$2.\$3/\$4-\$5", $cnpj_cpf);
 }
+

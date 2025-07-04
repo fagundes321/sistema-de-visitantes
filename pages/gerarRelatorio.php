@@ -82,7 +82,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
                                 <?php endif; ?>
 
                                 <tr class="historico-linha">
-                                    <td class="historico-oculto"><?= $dados['cpf'] ?></td>
+                                    <td class="historico-oculto"><?= formatCnpjCpf($dados['cpf']) ?></td>
                                     <td><?= $dados['nome'] ?></td>
                                     <td><?= $dados['destino'] ?></td>
                                     <td><?= $dados['responsavel'] ?></td>
