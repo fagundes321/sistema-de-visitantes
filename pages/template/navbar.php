@@ -1,6 +1,7 @@
 <?php
 require_once __DIR__ . ('/../../config/protect/protectLogin.php');
 require_once __DIR__ . ('/head.php');
+
 // ele pega a pagina atual e armazena na variavel
 $paginaAtual = basename($_SERVER['PHP_SELF']);
 
@@ -42,7 +43,7 @@ $paginaAtual = basename($_SERVER['PHP_SELF']);
                     <li class="nav-item">
                         <a class="nav-link <?= ($paginaAtual == 'gerarRelatorio.php') ? 'active' : '' ?>" href="/pages/gerarRelatorio.php">Relatório</a>
                     </li>
-                    
+
                     <li class="nav-item">
                         <a class="nav-link <?= ($paginaAtual == 'historico.php') ? 'active' : '' ?>" href="/pages/historico.php">Histórico</a>
                     </li>

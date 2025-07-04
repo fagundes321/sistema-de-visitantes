@@ -17,10 +17,10 @@ services:
   mysql-db:
     image: mysql:8.0
     environment:
-      MYSQL_ROOT_PASSWORD: '123'
+      MYSQL_ROOT_PASSWORD: "123"
       MYSQL_DATABASE: visitantes
       MYSQL_USER: db_user
-      MYSQL_PASSWORD: '123'
+      MYSQL_PASSWORD: "123"
     ports:
       - "3307:3306"
   phpmyadmin:
@@ -31,4 +31,4 @@ services:
       - "662:80"
     environment:
       PMA_HOST: mysql-db
-      MYSQL_ROOT_PASSWORD: '123'
+      MYSQL_ROOT_PASSWORD: "123"

@@ -30,5 +30,4 @@ $dompdf->render();
 // Envia o PDF para o navegador (como download)
 $dompdf->stream('Relatorio_Visitantes_' . $data . '.pdf', [
     'Attachment' => false // true = download / false = abrir no navegador
-    ]);
-?>
+]);

@@ -40,23 +40,19 @@ function inserirdado($pdo)
 }
 
 
-// Lógica de envio do formulário
-// No início do POST, já limpa e formata o CPF
+
+
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    // Remove tudo que não for número do cpf
-    // $cpf = preg_replace('/\D/', '', $cpf);
-    // Formata o CPF com pontos e traço
-    // $cpfFormatado = formatCpf($cpf);
 
     if (empty($cpf)) {
         $erroCpf = 'Informe o CPF';
     } elseif (!ctype_digit($cpf)) {
         $erroCpf = 'Informe um valor numérico';
-    } elseif (strlen($cpf) !== 11) {  // CPF tem 11 dígitos
+    } elseif (strlen($cpf) !== 11) {
 
-    // condicional caso precisar cadastrar cnpj   
-    // } elseif (strlen($cpf) !== 11 && strlen($cpf) !== 14) {
-    
+        // condicional caso precisar cadastrar cnpj   
+        // } elseif (strlen($cpf) !== 11 && strlen($cpf) !== 14) {
+
         $erroCpf = 'O CPF deve ter 11 dígitos';
     } else {
         $erroCpf = '';
@@ -81,14 +77,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $erroResponsavel = 'O responsável deve conter apenas letras';
     }
 
-    // O resto da validação continua igual
-    if (empty($destino)) $erroDestino = 'Informe o destino';
-    if (empty($responsavel)) $erroResponsavel = 'Informe o responsável';
-
     if (!$erroCpf && !$erroNome && !$erroDestino && !$erroResponsavel) {
-        // Na hora de inserir, passe o CPF formatado, se preferir assim
-        // Ou passe o número limpo $cpf sem formatação — depende do seu banco e uso
-        // Aqui vou passar o formatado para salvar com máscara
+
 
         inserirdado($pdo);
 

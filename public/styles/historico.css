@@ -66,8 +66,6 @@ body {
 .historico-tabela thead,
 .historico-tabela tbody tr {
   display: table;
-  /* border-left: 1px solid #bdbdbe;
-  border-right: 1px solid #bdbdbe; */
   border-radius: 10px;
   width: 100%;
   table-layout: fixed;
@@ -129,11 +127,9 @@ body {
   font-size: 1.4rem;
   font-weight: bold;
   color: #2c3e50;
-  /* background-color: #ecf0f1; */
   padding: 10px 20px;
   border-left: 2px solid #3498db;
   border-radius: 10px;
-  /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
 }
 
 .historicoTitulo {

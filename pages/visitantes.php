@@ -72,7 +72,8 @@ $hoje = date('d/m/Y');
         </div>
     </div>
 
-    <?php // require_once __DIR__ . '/template/footer.php'; ?>
+    <?php // require_once __DIR__ . '/template/footer.php'; 
+    ?>
 </body>
 
 </html>

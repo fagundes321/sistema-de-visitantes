@@ -1,19 +1,14 @@
 <?php
-ob_start(); 
+ob_start();
 require_once __DIR__ . '/../routes/rotas.php';
 require_once __DIR__ . '/template/navbar.php';
-require_once __DIR__ . '/../actions/create.php'; // usar require_once aqui para garantir que só inclua uma vez
-
-// Os valores e mensagens já virão do create.php após POST
-// if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-//     include __DIR__ . '/../actions/create.php';
-// }
-
+require_once __DIR__ . '/../actions/create.php';
 ?>
 
 
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <title>Registrar Visitante</title>
@@ -25,16 +20,26 @@ require_once __DIR__ . '/../actions/create.php'; // usar require_once aqui para 
             margin-right: 10px;
             margin-left: 10px;
         }
+
         .form-container {
             max-width: 700px;
             animation: fadeIn 0.4s ease-in-out;
         }
+
         @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(-12px); }
-            to { opacity: 1; transform: translateY(0); }
+            from {
+                opacity: 0;
+                transform: translateY(-12px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
     </style>
 </head>
+
 <body>
     <div class="container mt-5 form-container bg-white p-4 rounded shadow">
         <h3 class="mb-4 text-center text-primary">➕ Registrar Visitante</h3>
@@ -69,6 +74,8 @@ require_once __DIR__ . '/../actions/create.php'; // usar require_once aqui para 
             </div>
         </form>
     </div>
-    <?php // require_once __DIR__ . ('/template/footer.php'); ?>
+    <?php // require_once __DIR__ . ('/template/footer.php'); 
+    ?>
 </body>
+
 </html>
