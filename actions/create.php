@@ -53,6 +53,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     } elseif (!ctype_digit($cpf)) {
         $erroCpf = 'Informe um valor numérico';
     } elseif (strlen($cpf) !== 11) {  // CPF tem 11 dígitos
+
+    // condicional caso precisar cadastrar cnpj   
+    // } elseif (strlen($cpf) !== 11 && strlen($cpf) !== 14) {
+    
         $erroCpf = 'O CPF deve ter 11 dígitos';
     } else {
         $erroCpf = '';

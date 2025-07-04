@@ -38,7 +38,8 @@ Abaixo está a estrutura de diretórios do sistema de visitantes desenvolvido em
 │   │   ├── 🐘 gerarPdf.php               # Responsável por gerar o PDF
 │   │   └── 🐘 pdf.php                    # Contém o layout/HTML do PDF
 │   ├── 🐘 create.php                     # Adiciona as informações dos visitantes no banco de dados 
-│   ├── 🐘 delete.php                     # Remove registros do banco de dados  
+│   ├── 🐘 delete.php                     # Remove registros do banco de dados 
+│   ├── 🐘 formatCpf.php                  # Função para formatar CPF ou CNPJ
 │   ├── 🐘 read.php                       # Lista os registros existentes na tabela (exibição na aplicação)
 │   └── 🐘 update.php                     # Atualiza os dados de um registro existente
 ├── 📁 config/
