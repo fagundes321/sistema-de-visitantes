@@ -1,6 +1,6 @@
-# 📋 Sistema de Cadastro de Usuários
+# 📋 Sistema de Cadastro de visitantes
 
- Este é um sistema simples de **cadastro de usuários em PHP**, com conexão a um banco de dados **MySQL** <!-- hospedado na **Render** -->.O sistema permite cadastrar as seguintes informações dos visitantes:  **CPF, nome, destino, responsável, hora da entrada, hora da saída e data da visita**, salvando os dados diretamente no banco de dados.
+ Este é um sistema simples de **cadastro de visitantes em PHP**, com conexão a um banco de dados **MySQL** <!-- hospedado na **Render** -->.O sistema permite cadastrar as seguintes informações dos visitantes:  **CPF, nome, destino, responsável, hora da entrada, hora da saída e data da visita**, salvando os dados diretamente no banco de dados.
 
 Além do cadastro, o sistema oferece as seguintes funcionalidades:
 
